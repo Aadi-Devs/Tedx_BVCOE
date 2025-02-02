@@ -44,7 +44,7 @@ const Navbar = () => {
           <a href="#contact" className="">
             CONTACT
           </a>
-          <span className="">TEDxBVCOE22</span>
+          <span className="">TEDxBVCOE2</span>
         </div>
       </nav>
       <nav className="navbar h-full w-full bg-black sm:hidden flex flex-row items-center justify-between px-4 py-[1.55rem]">
