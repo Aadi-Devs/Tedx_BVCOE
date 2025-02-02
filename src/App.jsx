@@ -148,14 +148,14 @@ const InfoButtons = () => {
 const Speakers = () => {
   return(
       <>
-        <div className="min-h-[700px] bg-black">
-          <h1></h1>
-          <div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+        <div className="min-h-[700px] bg-black flex flex-col w-full px-10 items-center gap-6">
+          <h1 className="text-white text-3xl font-bold">SPEAKERS</h1>
+          <div className="grid sm:grid-cols-3 grid-cols-1 gap-12 items-center justify-center">
+            <div className=" sm:h-[400px] h-[360px] w-80 flex flex-col items-center justify-center gap-4 border border-white rounded-2xl px-4 bg-[#000E24]"></div>
+            <div className=" sm:h-[400px] h-[360px] w-80 flex flex-col items-center justify-center gap-4 border border-white rounded-2xl px-4 bg-[#000E24]"></div>
+            <div className=" sm:h-[400px] h-[360px] w-80 flex flex-col items-center justify-center gap-4 border border-white rounded-2xl px-4 bg-[#000E24]"></div>
+            <div className=" sm:h-[400px] h-[360px] w-80 flex flex-col items-center justify-center gap-4 border border-white rounded-2xl px-4 bg-[#000E24]"></div>
+            <div className=" sm:h-[400px] h-[360px] w-80 flex flex-col items-center justify-center gap-4 border border-white rounded-2xl px-4 bg-[#000E24]"></div>
           </div>
         </div>
       </>
