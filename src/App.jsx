@@ -20,6 +20,7 @@ const App = () => {
       <Hero />
       <PassesButton />
       <InfoButtons />
+      <Speakers />
     </>
   );
 };
@@ -124,10 +125,10 @@ const InfoButtons = () => {
   return (
     <>
       <div className="flex relative w-full flex-col items-center sm:h-[600px] h-[700px] bg-black gap-10">
-        <img src={infoButtonImgLeft} alt="" height="450" width="450" className="absolute left-0"/>
-        <img src={infoButtonImgRight} alt="" height="450" width="450" className="absolute right-0"/>
-        <img src={infoButtonImgLeftMobile} alt="" width="190" height="500" className="absolute hidden"/>
-        <img src={infoButtonImgRightMobile} alt="" width="190" height="500" className="absolute hidden"/>
+        <img src={infoButtonImgLeft} alt="" height="450" width="450" className="absolute sm:visible invisible left-0 -top-20"/>
+        <img src={infoButtonImgRight} alt="" height="450" width="450" className="absolute sm:visible invisible right-0 -top-20"/>
+        <img src={infoButtonImgLeftMobile} alt="" width="190" height="500" className="left-0 absolute sm:invisible visible top-36"/>
+        <img src={infoButtonImgRightMobile} alt="" width="190" height="500" className="right-0 absolute sm:invisible visible top-36"/>
         <h1 className=" text-white text-2xl font-bold top-0 uppercase">WHAT IS TED?</h1>
         <div className=" flex flex-row items-center justify-center gap-4">
           <button className="bg-none text-white sm:h-16 h-14 sm:px-8 px-4 py-2 items-center justify-center border-2 border-white rounded-xl font-bold">TED</button>
@@ -143,5 +144,24 @@ const InfoButtons = () => {
     </>
   );
 };
+
+const Speakers = () => {
+  return(
+      <>
+        <div className="min-h-[700px] bg-black">
+          <h1></h1>
+          <div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+      </>
+  );
+};
+
+
 
 export default App;
