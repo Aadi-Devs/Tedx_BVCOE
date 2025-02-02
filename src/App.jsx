@@ -8,6 +8,10 @@ import heroImg2 from "../../Tedx-Website/src/assets/heroImg2.svg";
 import navMobileMenu from "../../Tedx-Website/src/assets/navMobileMenu.svg";
 import year from "../../Tedx-Website/src/assets/2025.svg";
 import Passes_btn_heart from "../../Tedx-Website/src/assets/Passes_btn_heart.png";
+import infoButtonImgLeft from "../../Tedx-Website/src/assets/infoButtonImgLeft.svg";
+import infoButtonImgRight from "../../Tedx-Website/src/assets/infoButtonImgRight.svg";
+import infoButtonImgLeftMobile from "../../Tedx-Website/src/assets/infoButtonImgLeftMobile.svg";
+import infoButtonImgRightMobile from "../../Tedx-Website/src/assets/infoButtonImgRightMobile.svg";
 
 const App = () => {
   return (
@@ -15,6 +19,7 @@ const App = () => {
       <Navbar />
       <Hero />
       <PassesButton />
+      <InfoButtons />
     </>
   );
 };
@@ -102,16 +107,40 @@ const Hero = () => {
 const PassesButton = () => {
   return (
     <div className="sm:h-[480px] h-[250px] w-full bg-black flex flex-col items-center">
-      <img src={year} alt="" width="1682" height="250" className=""/>
+      <img src={year} alt="" width="1682" height="250" className="" />
       <div className="flex h-full items-center">
         <a href="">
           <button className="bg-gray-400 flex flex-row items-center justify-center gap-3 transition-all text-center text-xl text-black font-bold py-2 px-4 rounded-xl h-16">
             GET PASSES NOW
-            <img src={Passes_btn_heart} alt="" className="w-4"/>
+            <img src={Passes_btn_heart} alt="" className="w-4" />
           </button>
         </a>
       </div>
     </div>
+  );
+};
+
+const InfoButtons = () => {
+  return (
+    <>
+      <div className="flex relative w-full flex-col items-center sm:h-[600px] h-[700px] bg-black gap-10">
+        <img src={infoButtonImgLeft} alt="" height="450" width="450" className="absolute left-0"/>
+        <img src={infoButtonImgRight} alt="" height="450" width="450" className="absolute right-0"/>
+        <img src={infoButtonImgLeftMobile} alt="" width="190" height="500" className="absolute hidden"/>
+        <img src={infoButtonImgRightMobile} alt="" width="190" height="500" className="absolute hidden"/>
+        <h1 className=" text-white text-2xl font-bold top-0 uppercase">WHAT IS TED?</h1>
+        <div className=" flex flex-row items-center justify-center gap-4">
+          <button className="bg-none text-white sm:h-16 h-14 sm:px-8 px-4 py-2 items-center justify-center border-2 border-white rounded-xl font-bold">TED</button>
+          <button className="bg-none text-white sm:h-16 h-14 sm:px-8 px-4 py-2 items-center justify-center border-2 border-white rounded-xl font-bold">TEDx</button>
+          <button className="bg-white text-black sm:h-16 h-14 sm:px-8 px-4 py-2 items-center justify-center border-2 border-white rounded-xl font-bold">TEDxBVCOE</button>
+        </div>
+        <div className=" sm:w-[600px] font-medium px-10">
+          <p className="flex text-white text-xl sm:text-justify text-justify">TED (Technology, Entertainment, Design) is a global platform that hosts conferences featuring influential speakers from various fields who share their innovative ideas and experiences. Founded in 1984, TED has become synonymous with "Ideas Worth Spreading." The main TED conference is held annually in Vancouver, Canada, and its talks cover a wide range of topics, including science.</p>
+          <p className="hidden text-white text-xl sm:text-justify text-justify">TEDx events are independently organized TED-like conferences that can take place anywhere in the world. These events aim to bring the spirit of TED to local communities and provide a platform for individuals to share their ideas and perspectives. TEDx talks cover a broad spectrum of subjects, often reflecting the unique challenges and innovations of a particular region. year.</p>
+          <p className="hidden text-white text-xl sm:text-justify text-justify">TEDxBVCOE is a specific instance of a TEDx event affiliated with Bharati Vidyapeeth College of Engineering (BVCOE) in Delhi, India. Organized independently by a dedicated local team of volunteers, TEDxBVCOE serves as a platform for students, educators, and professionals to share their insights and ideas with the community. The "BVCOE" in TEDxBVCOE represents Bharati Vidyapeeth College of Engineering, the hosting institution.</p>
+        </div>
+      </div>
+    </>
   );
 };
 
