@@ -1,28 +1,28 @@
 import React from "react";
 import "./index.css";
-// import navLogo from "../../Tedx-Website/src/assets/navLogo.svg";
-// import homeLogo from "../../Tedx-Website/src/assets/homeLogo.svg";
-// import heroImg1 from "../../Tedx-Website/src/assets/heroImg1.svg";
-// import heroImgMobile from "../../Tedx-Website/src/assets/heroImgMobile.svg";
-// import heroImg2 from "../../Tedx-Website/src/assets/heroImg2.svg";
-// import navMobileMenu from "../../Tedx-Website/src/assets/navMobileMenu.svg";
-// import year from "../../Tedx-Website/src/assets/2025.svg";
-// import Passes_btn_heart from "../../Tedx-Website/src/assets/Passes_btn_heart.png";
-// import infoButtonImgLeft from "../../Tedx-Website/src/assets/infoButtonImgLeft.svg";
-// import infoButtonImgRight from "../../Tedx-Website/src/assets/infoButtonImgRight.svg";
-// import infoButtonImgLeftMobile from "../../Tedx-Website/src/assets/infoButtonImgLeftMobile.svg";
-// import infoButtonImgRightMobile from "../../Tedx-Website/src/assets/infoButtonImgRightMobile.svg";
-// import card1Img from "../../Tedx-Website/src/assets/card1Img.webp";
-// import card2Img from "../../Tedx-Website/src/assets/card2Img.webp";
-// import card3Img from "../../Tedx-Website/src/assets/card3Img.webp";
-// import card4Img from "../../Tedx-Website/src/assets/card4Img.webp";
-// import card5Img from "../../Tedx-Website/src/assets/card5Img.webp";
-// import Arrow from "../../Tedx-Website/src/assets/Arrow.png";
-// import Ticket1 from "../../Tedx-Website/src/assets/Ticket_1.svg";
-// import Ticket2 from "../../Tedx-Website/src/assets/Ticket_2.svg";
-// import Ticket3 from "../../Tedx-Website/src/assets/Ticket_3.svg";
-// import insta_logo from "../../Tedx-Website/src/assets/insta_logo.png";
-// import linkedIn_logo from "../../Tedx-Website/src/assets/linkedIn_logo.png";
+import navLogo from "../../Tedx-Website/src/assets/navLogo.svg";
+import homeLogo from "../../Tedx-Website/src/assets/homeLogo.svg";
+import heroImg1 from "../../Tedx-Website/src/assets/heroImg1.svg";
+import heroImgMobile from "../../Tedx-Website/src/assets/heroImgMobile.svg";
+import heroImg2 from "../../Tedx-Website/src/assets/heroImg2.svg";
+import navMobileMenu from "../../Tedx-Website/src/assets/navMobileMenu.svg";
+import year from "../../Tedx-Website/src/assets/2025.svg";
+import Passes_btn_heart from "../../Tedx-Website/src/assets/Passes_btn_heart.png";
+import infoButtonImgLeft from "../../Tedx-Website/src/assets/infoButtonImgLeft.svg";
+import infoButtonImgRight from "../../Tedx-Website/src/assets/infoButtonImgRight.svg";
+import infoButtonImgLeftMobile from "../../Tedx-Website/src/assets/infoButtonImgLeftMobile.svg";
+import infoButtonImgRightMobile from "../../Tedx-Website/src/assets/infoButtonImgRightMobile.svg";
+import card1Img from "../../Tedx-Website/src/assets/card1Img.webp";
+import card2Img from "../../Tedx-Website/src/assets/card2Img.webp";
+import card3Img from "../../Tedx-Website/src/assets/card3Img.webp";
+import card4Img from "../../Tedx-Website/src/assets/card4Img.webp";
+import card5Img from "../../Tedx-Website/src/assets/card5Img.webp";
+import Arrow from "../../Tedx-Website/src/assets/Arrow.png";
+import Ticket1 from "../../Tedx-Website/src/assets/Ticket_1.svg";
+import Ticket2 from "../../Tedx-Website/src/assets/Ticket_2.svg";
+import Ticket3 from "../../Tedx-Website/src/assets/Ticket_3.svg";
+import insta_logo from "../../Tedx-Website/src/assets/insta_logo.png";
+import linkedIn_logo from "../../Tedx-Website/src/assets/linkedIn_logo.png";
 
 const App = () => {
   return (
@@ -56,8 +56,7 @@ const Navbar = () => {
           </a>
         </div>
         <div className="navbar-brand">
-          {/* <img src={navLogo} alt="" className="w-[14rem]" /> */}
-          {/* <svg src={navLogo} alt="" className="w-[14rem]" /> */}
+          <img src={navLogo} alt="" className="w-[14rem]" />
         </div>
         <div className="flex text-white text-xl gap-5">
           <a href="#faqs" className="">
@@ -71,13 +70,13 @@ const Navbar = () => {
       </nav>
       <nav className="navbar h-full w-full bg-black sm:hidden flex flex-row items-center justify-between px-4 py-[1.55rem]">
         <a className="" href="/">
-          {/* <img src={navLogo} alt="" width="134" height="30" /> */}
+          <img src={navLogo} alt="" width="134" height="30" />
         </a>
-        {/* <img
+        <img
           src={navMobileMenu}
           alt=""
           className="w-[28px] object-contain text-white"
-        /> */}
+        />
         <div className="hidden transition-all p-6 absolute z-50 top-20 right-0 mx-4 my-2 min-w-[140px] rounded-xl bg-black">
           <ul>
             <li></li>
@@ -97,24 +96,24 @@ const Hero = () => {
   return (
     <>
       <div className="">
-        {/* <img
+        <img
           src={homeLogo}
           alt=""
           className="static sm:h-full h-screen w-full object-cover object-center items-center justify-center"
-        /> */}
+        />
         <div className="top-20 z-10 bg-black opacity-80 absolute sm:h-[1172px] h-screen w-full"></div>
         <div className="absolute flex sm:flex-row flex-col sm:top-80 top-40 w-full sm:justify-evenly sm:gap-0 gap-24 items-center">
-          {/* <img src={heroImg1} alt="" className="sm:w-[500px] w-[300px] z-20" /> */}
-          {/* <img
+          <img src={heroImg1} alt="" className="sm:w-[500px] w-[300px] z-20" />
+          <img
             src={heroImgMobile}
             alt=""
             className="sm:invisible visible w-[300px] z-20"
-          /> */}
-          {/* <img
+          />
+          <img
             src={heroImg2}
             alt=""
             className="sm:w-[500px] sm:visible invisible w-[300px] z-20"
-          /> */}
+          />
         </div>
       </div>
     </>
@@ -124,12 +123,12 @@ const Hero = () => {
 const PassesButton = () => {
   return (
     <div className="sm:h-[480px] h-[250px] w-full bg-black flex flex-col items-center">
-      {/* <img src={year} alt="" width="1682" height="250" className="" /> */}
+      <img src={year} alt="" width="1682" height="250" className="" />
       <div className="flex h-full items-center">
         <a href="">
           <button className="bg-gray-400 flex flex-row items-center justify-center gap-3 transition-all text-center text-xl text-black font-bold py-2 px-4 rounded-xl h-16">
             GET PASSES NOW
-            {/* <img src={Passes_btn_heart} alt="" className="w-4" /> */}
+            <img src={Passes_btn_heart} alt="" className="w-4" />
           </button>
         </a>
       </div>
@@ -141,34 +140,34 @@ const InfoButtons = () => {
   return (
     <>
       <div className="flex relative w-full flex-col items-center sm:h-[600px] h-[700px] bg-black gap-10">
-        {/* <img
+        <img
           src={infoButtonImgLeft}
           alt=""
           height="450"
           width="450"
           className="absolute sm:visible invisible left-0 -top-20"
-        /> */}
-        {/* <img
+        />
+        <img
           src={infoButtonImgRight}
           alt=""
           height="450"
           width="450"
           className="absolute sm:visible invisible right-0 -top-20"
-        /> */}
-        {/* <img
+        />
+        <img
           src={infoButtonImgLeftMobile}
           alt=""
           width="190"
           height="500"
           className="left-0 absolute sm:invisible visible top-36"
-        /> */}
-        {/* <img
+        />
+        <img
           src={infoButtonImgRightMobile}
           alt=""
           width="190"
           height="500"
           className="right-0 absolute sm:invisible visible top-36"
-        /> */}
+        />
         <h1 className=" text-white text-2xl font-bold top-0 uppercase">
           WHAT IS TED?
         </h1>
@@ -222,13 +221,13 @@ const Speakers = () => {
         <h1 className="text-white text-3xl font-bold">SPEAKERS</h1>
         <div className="grid sm:grid-cols-3 grid-cols-1 gap-12 items-center justify-center">
           <div className=" sm:h-[400px] h-[360px] w-80 flex flex-col items-center justify-center gap-4 border border-white rounded-2xl px-4 bg-[#000E24]">
-            {/* <img
+            <img
               src={card1Img}
               alt=""
               width="100"
               height="100"
               className="rounded-full h-40 w-40 object-cover"
-            /> */}
+            />
             <div className="text-3xl font-bold text-[#D74D26]">
               Vivek Rathod
             </div>
@@ -237,13 +236,13 @@ const Speakers = () => {
             </div>
           </div>
           <div className=" sm:h-[400px] h-[360px] w-80 flex flex-col items-center justify-center gap-4 border border-white rounded-2xl px-4 bg-[#000E24]">
-            {/* <img
+            <img
               src={card2Img}
               alt=""
               width="100"
               height="100"
               className="rounded-full h-40 w-40 object-cover"
-            /> */}
+            />
             <div className="text-3xl font-bold text-[#D74D26]">
               Sonendra Verma
             </div>
@@ -252,39 +251,39 @@ const Speakers = () => {
             </div>
           </div>
           <div className=" sm:h-[400px] h-[360px] w-80 flex flex-col items-center justify-center gap-4 border border-white rounded-2xl px-4 bg-[#000E24]">
-            {/* <img
+            <img
               src={card3Img}
               alt=""
               width="100"
               height="100"
               className="rounded-full h-40 w-40 object-cover"
-            /> */}
+            />
             <div className="text-3xl font-bold text-[#D74D26]">
               Dr. Akriti Khatri
             </div>
             <div className="text-2xl text-[#FFF0D2] text-center">Detective</div>
           </div>
           <div className=" sm:h-[400px] h-[360px] w-80 flex flex-col items-center justify-center gap-4 border border-white rounded-2xl px-4 bg-[#000E24]">
-            {/* <img
+            <img
               src={card4Img}
               alt=""
               width="100"
               height="100"
               className="rounded-full h-40 w-40 object-cover"
-            /> */}
+            />
             <div className="text-3xl font-bold text-[#D74D26]">Khalid Wani</div>
             <div className="text-2xl text-[#FFF0D2] text-center">
               Marketing Guru
             </div>
           </div>
           <div className=" sm:h-[400px] h-[360px] w-80 flex flex-col items-center justify-center gap-4 border border-white rounded-2xl px-4 bg-[#000E24]">
-            {/* <img
+            <img
               src={card5Img}
               alt=""
               width="100"
               height="100"
               className="rounded-full h-40 w-40 object-cover"
-            /> */}
+            />
             <div className="text-3xl font-bold text-[#D74D26]">
               Umesh Rathod
             </div>
@@ -310,9 +309,9 @@ const TicketBuying = () => {
         </a>
         <h1 className="text-white text-4xl font-bold">AVAILABLE PASSES</h1>
         <div className="flex flex-col sm:gap-16 px-6 gap-16">
-          {/* <img src={Ticket1} alt="" className=" sm:h-[440px] w-full" /> */}
-          {/* <img src={Ticket2} alt="" className=" sm:h-[440px] w-full" /> */}
-          {/* <img src={Ticket3} alt="" className=" sm:h-[440px] w-full" /> */}
+          <img src={Ticket1} alt="" className=" sm:h-[440px] w-full" />
+          <img src={Ticket2} alt="" className=" sm:h-[440px] w-full" />
+          <img src={Ticket3} alt="" className=" sm:h-[440px] w-full" />
         </div>
       </div>
     </>
@@ -326,7 +325,7 @@ const Partners = () => {
         <h1 className="text-white font-bold text-3xl">OUR PARTNERS</h1>
         <button className="bg-gray-400 flex flex-row items-center justify-center gap-3 transition-all text-center text-xl text-black font-bold py-2 px-4 rounded-xl h-16">
           PARTNERS REVEALING SOON
-          {/* <img src={Passes_btn_heart} alt="" className="w-4" /> */}
+          <img src={Passes_btn_heart} alt="" className="w-4" />
         </button>
       </div>
     </>
@@ -350,10 +349,10 @@ const FAQ = () => {
                 <span className="sm:text-3xl text-2xl font-bold">
                   What will be the venue of the event?
                 </span>
-                {/* <img
+                <img
                   src="https://upload.wikimedia.org/wikipedia/commons/9/96/Chevron-icon-drop-down-menu-WHITE.png"
                   className="h-3 w-5 transition-all duration-500 group-focus:-rotate-180"
-                /> */}
+                />
               </div>
               <div className="invisible h-auto max-h-0 items-center opacity-0 transition-all group-focus:visible group-focus:max-h-screen group-focus:opacity-100 group-focus:duration-1000 sm:text-2xl text-xl w-9/10">
                 The event will be hosted in offline mode within the premises of
@@ -369,10 +368,10 @@ const FAQ = () => {
                 <span className="sm:text-3xl text-2xl font-bold">
                   How would I know my registration has been confirmed?
                 </span>
-                {/* <img
+                <img
                   src="https://upload.wikimedia.org/wikipedia/commons/9/96/Chevron-icon-drop-down-menu-WHITE.png"
                   className="h-3 w-5 transition-all duration-500 group-focus:-rotate-180"
-                /> */}
+                />
               </div>
               <div className="invisible h-auto max-h-0 items-center opacity-0 transition-all group-focus:visible group-focus:max-h-screen group-focus:opacity-100 group-focus:duration-1000 sm:text-2xl text-xl w-9/10">
                 You will receive the confirmation on your registered email from
@@ -389,10 +388,10 @@ const FAQ = () => {
                   What if my payment for the registration of the event(s) gets
                   deducted from my account but did not receive any confirmation?
                 </span>
-                {/* <img
+                <img
                   src="https://upload.wikimedia.org/wikipedia/commons/9/96/Chevron-icon-drop-down-menu-WHITE.png"
                   className="h-3 w-5 transition-all duration-500 group-focus:-rotate-180"
-                /> */}
+                />
               </div>
               <div className="invisible h-auto max-h-0 items-center opacity-0 transition-all group-focus:visible group-focus:max-h-screen group-focus:opacity-100 group-focus:duration-1000 sm:text-2xl text-xl w-9/10">
                 You can contact us through your registered email on TEDxBVCOE
@@ -409,10 +408,10 @@ const FAQ = () => {
                   I made a mistake buying my pass for the event(s). What do I do
                   now?
                 </span>
-                {/* <img
+                <img
                   src="https://upload.wikimedia.org/wikipedia/commons/9/96/Chevron-icon-drop-down-menu-WHITE.png"
                   className="h-3 w-5 transition-all duration-500 group-focus:-rotate-180"
-                /> */}
+                />
               </div>
               <div className="invisible h-auto max-h-0 items-center opacity-0 transition-all group-focus:visible group-focus:max-h-screen group-focus:opacity-100 group-focus:duration-1000 sm:text-2xl text-xl w-9/10">
                 Reach out to us on bvcoetedx@gmail.com.
@@ -427,10 +426,10 @@ const FAQ = () => {
                   Can I cancel my registration for the events I enrolled for? If
                   so, what is the process?
                 </span>
-                {/* <img
+                <img
                   src="https://upload.wikimedia.org/wikipedia/commons/9/96/Chevron-icon-drop-down-menu-WHITE.png"
                   className="h-3 w-5 transition-all duration-500 group-focus:-rotate-180"
-                /> */}
+                />
               </div>
               <div className="invisible h-auto max-h-0 items-center opacity-0 transition-all group-focus:visible group-focus:max-h-screen group-focus:opacity-100 group-focus:duration-1000 sm:text-2xl text-xl w-9/10">
                 Reach out to us on bvcoetedx@gmail.com.
@@ -451,7 +450,7 @@ const Footer = () => {
           <div className="md:flex md:justify-between">
               <div className=" mb-6 md:mb-0">
                 <a className="flex items-center">
-                  {/* <img src={navLogo} alt="" className="w-70" /> */}
+                  <img src={navLogo} alt="" className="w-70" />
                 </a>
               </div>
               <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-2">
@@ -511,10 +510,10 @@ const Footer = () => {
             </span>
             <div className="flex mt-4 sm:justify-center gap-6 items-center sm:mt-0">
               <a href="" className="">
-                {/* <img src={insta_logo} alt="" className="w-14"/> */}
+                <img src={insta_logo} alt="" className="w-14"/>
               </a>
               <a href="">
-                {/* <img src={linkedIn_logo} alt="" className="w-8"/> */}
+                <img src={linkedIn_logo} alt="" className="w-8"/>
               </a>
             </div>
           </div>
