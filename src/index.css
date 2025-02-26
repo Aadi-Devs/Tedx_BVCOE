@@ -1,2 +1,24 @@
 @import "tailwindcss";
 
+/* Initial state, positioned off-screen */
+
+.slide-out {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  
+  /* When the menu is open */
+  .slide-in {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  
+  /* Smooth transition */
+  .transition-transform {
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  }
+  
+  .ham-burger {
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  }
+ 

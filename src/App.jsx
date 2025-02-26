@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./index.css";
 import navLogo from "./assets/navLogo.svg";
 import homeLogo from "./assets/homeLogo.svg";
@@ -12,17 +12,23 @@ import infoButtonImgLeft from "./assets/infoButtonImgLeft.svg";
 import infoButtonImgRight from "./assets/infoButtonImgRight.svg";
 import infoButtonImgLeftMobile from "./assets/infoButtonImgLeftMobile.svg";
 import infoButtonImgRightMobile from "./assets/infoButtonImgRightMobile.svg";
-import card1Img from "./assets/card1Img.webp";
-import card2Img from "./assets/card2Img.webp";
-import card3Img from "./assets/card3Img.webp";
-import card4Img from "./assets/card4Img.webp";
-import card5Img from "./assets/card5Img.webp";
 import Arrow from "./assets/Arrow.png";
-import Ticket1 from "./assets/Ticket_1.svg";
-import Ticket2 from "./assets/Ticket_2.svg";
-import Ticket3 from "./assets/Ticket_3.svg";
 import insta_logo from "./assets/insta_logo.png";
 import linkedIn_logo from "./assets/linkedIn_logo.png";
+import { Link } from "react-router-dom";
+import "aos/dist/aos.css";
+
+// import { Accordion, Button } from "@material-tailwind/react";
+// import { NavArrowDown } from "iconoir-react";
+
+// import card1Img from "./assets/card1Img.webp";
+// import card2Img from "./assets/card2Img.webp";
+// import card3Img from "./assets/card3Img.webp";
+// import card4Img from "./assets/card4Img.webp";
+// import card5Img from "./assets/card5Img.webp";
+// import Ticket1 from "./assets/Ticket_1.svg";
+// import Ticket2 from "./assets/Ticket_2.svg";
+// import Ticket3 from "./assets/Ticket_3.svg";
 
 const App = () => {
   return (
@@ -41,56 +47,124 @@ const App = () => {
 };
 
 const Navbar = () => {
+
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleToggle = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <>
       <nav className="navbar h-full w-full bg-black sm:flex hidden justify-between items-center overflow-hidden flex-row sm:px-6 sm:py-[0.94rem]">
         <div className="flex text-white text-xl gap-5">
-          <a href="#speakers" className="">
+          <Link
+            href="#speakers"
+            className=""
+            onClick={() => scrollToElement("speakers", 800)}
+          >
             SPEAKERS
-          </a>
-          <a href="#tickets" className="">
+          </Link>
+          <Link
+            href="#tickets"
+            className=""
+            onClick={() => scrollToElement("tickets", 1000)}
+          >
             TICKETS
-          </a>
-          <a href="#partners" className="">
+          </Link>
+          <Link
+            href="#partners"
+            className=""
+            onClick={() => scrollToElement("partners", 1200)}
+          >
             PARTNERS
-          </a>
+          </Link>
         </div>
         <div className="navbar-brand">
           <img src={navLogo} alt="" className="w-[14rem]" />
         </div>
         <div className="flex text-white text-xl gap-5">
-          <a href="#faqs" className="">
+          <Link
+            href="#faqs"
+            className=""
+            onClick={() => scrollToElement("faqs", 1400)}
+          >
             FAQs
-          </a>
-          <a href="#contact" className="">
+          </Link>
+          <Link
+            href="#contact"
+            className=""
+            onClick={() => scrollToElement("contact", 1600)}
+          >
             CONTACT
-          </a>
-          <span className="">TEDxBVCOE22</span>
+          </Link>
+          <span className="">TEDxBVCOE25</span>
         </div>
       </nav>
-      <nav className="navbar h-full w-full bg-black sm:hidden flex flex-row items-center justify-between px-4 py-[1.55rem]">
+
+      {/* mobile menu */}
+      <nav className="navbar h-screen fixed w-full bg-black sm:hidden flex flex-row items-center justify-between px-4 py-[1.55rem]">
         <a className="" href="/">
           <img src={navLogo} alt="" width="134" height="30" />
         </a>
-        <img
-          src={navMobileMenu}
-          alt=""
-          className="w-[28px] object-contain text-white"
-        />
-        <div className="hidden transition-all p-6 absolute z-50 top-20 right-0 mx-4 my-2 min-w-[140px] rounded-xl bg-black">
-          <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+        <button className="ham-burger-button custom:hidden cursor-pointer" onClick={handleToggle}>
+          <img
+            src={navMobileMenu}
+            alt=""
+            className="w-[28px] object-contain text-white"
+          />
+        </button>
+
+        <div
+          className={`${
+            isOpen ? "slide-in" : "slide-out"
+          } w-[15rem] h-screen ham-burger custom:hidden backdrop-blur-lg bg-opacity-40 absolute top-20 right-0 z-10 transition-transform duration-300 z-[150]`}
+        >
+          <ul className="flex flex-col items-center bg-opacity-40 backdrop-blur-md">
+            <Link
+              className="p-5 xl:p-8 text-white font-bold hover:text-underline"
+              onClick={() => scrollToElement("speakers", 800)}
+            >
+              SPEAKERS
+            </Link>
+            <Link
+              className="p-5 xl:p-8 text-white font-bold hover:text-underline"
+              onClick={() => scrollToElement("tickets", 1000)}
+            >
+              TICKETS
+            </Link>
+            <Link
+              className="p-5 xl:p-8 text-white font-bold hover:text-underline"
+              onClick={() => scrollToElement("partners", 1200)}
+            >
+              PARTNERS
+            </Link>
+            <Link
+              className="p-5 xl:p-8 text-white font-bold hover:text-underline"
+              onClick={() => scrollToElement("faqs", 1400)}
+            >
+              FAQs
+            </Link>
+            <Link
+              className="p-5 xl:p-8 text-white font-bold hover:text-underline"
+              onClick={() => scrollToElement("contact", 1600)}
+            >
+              CONTACT
+            </Link>
+            <Link
+              className="p-5 xl:p-8 text-white font-bold hover:text-underline"
+              to=""
+            >
+              TedxBVCOE25
+            </Link>
           </ul>
         </div>
       </nav>
     </>
   );
 };
+
+
 
 const Hero = () => {
   return (
@@ -125,21 +199,41 @@ const PassesButton = () => {
     <div className="sm:h-[480px] h-[250px] w-full bg-black flex flex-col items-center">
       <img src={year} alt="" width="1682" height="250" className="" />
       <div className="flex h-full items-center">
-        <a href="">
-          <button className="bg-gray-400 flex flex-row items-center justify-center gap-3 transition-all text-center text-xl text-black font-bold py-2 px-4 rounded-xl h-16">
+        <Link onClick={() => scrollToElement("tickets", 1000)}>
+          <button className="bg-gray-400 flex flex-row items-center justify-center gap-3 transition-all text-center text-xl text-black font-bold py-2 px-4 rounded-xl h-16 cursor-pointer">
             GET PASSES NOW
             <img src={Passes_btn_heart} alt="" className="w-4" />
           </button>
-        </a>
+        </Link>
       </div>
     </div>
   );
 };
 
 const InfoButtons = () => {
+  const [openIndex, setOpenIndex] = useState(0);
+
+  const items = [
+    {
+      title: "TED",
+      content:
+        "TED (Technology, Entertainment, Design) is a global platform that hosts conferences featuring influential speakers from various fields who share their innovative ideas and experiences. Founded in 1984,TED has become synonymous with Ideas Worth Spreading.The main TED conference is held annually in Vancouver, Canada, and its talks cover a wide range of topics, including science.",
+    },
+    {
+      title: "TEDx",
+      content:
+        "TEDx events are independently organized TED-like conferences that can take place anywhere in the world. These events aim to bring the spirit of TED to local communities and provide a platform for individuals to share their ideas and perspectives. TEDx talks cover a broad spectrum of subjects, often reflecting the unique challenges and innovations of a particular region. year.",
+    },
+    {
+      title: "TEDxBVCOE",
+      content:
+        "TEDxBVCOE is a specific instance of a TEDx event affiliated with Bharati Vidyapeeth College of Engineering (BVCOE) in Delhi, India. Organized independently by a dedicated local team of volunteers, TEDxBVCOE serves as a platform for students, educators, and professionals to share their insights and ideas with the community. The BVCOE in TEDxBVCOE represents Bharati Vidyapeeth College of Engineering, the hosting institution.",
+    },
+  ];
+
   return (
     <>
-      <div className="flex relative w-full flex-col items-center sm:h-[600px] h-[700px] bg-black gap-10">
+      <div className="flex relative w-full flex-col items-center pt-20 sm:h-[600px] h-[700px] bg-black gap-10">
         <img
           src={infoButtonImgLeft}
           alt=""
@@ -171,7 +265,38 @@ const InfoButtons = () => {
         <h1 className=" text-white text-2xl font-bold top-0 uppercase">
           WHAT IS TED?
         </h1>
-        <div className=" flex flex-row items-center justify-center gap-4">
+
+        {/* NEW CODE */}
+
+        <div className="flex flex-col items-center sm:w-[600px] w-full gap-4 bg-black text-white p-5">
+          <div className="flex space-x-2 mb-4 gap-5">
+            {items.map((item, index) => (
+              <button
+                key={index}
+                className="bg-none text-white sm:h-16 h-14 sm:px-8 px-4 py-2 items-center justify-center border-2 border-white rounded-xl font-bold cursor-pointer"
+                onClick={() => setOpenIndex(openIndex === index ? null : index)}
+              >
+                {item.title}
+              </button>
+            ))}
+          </div>
+          {items.map((item, index) => (
+            <div
+              key={index}
+              className={`transition-all duration-300 ${
+                openIndex === index ? "max-h-40" : "max-h-0 overflow-hidden"
+              }`}
+            >
+              <p className="text-white font-medium text-xl sm:text-justify text-justify">
+                {item.content}
+              </p>
+            </div>
+          ))}
+        </div>
+
+        {/* OlD CODE */}
+
+        {/* <div className=" flex flex-row items-center justify-center gap-4">
           <button className="bg-none text-white sm:h-16 h-14 sm:px-8 px-4 py-2 items-center justify-center border-2 border-white rounded-xl font-bold">
             TED
           </button>
@@ -208,7 +333,7 @@ const InfoButtons = () => {
             The "BVCOE" in TEDxBVCOE represents Bharati Vidyapeeth College of
             Engineering, the hosting institution.
           </p>
-        </div>
+        </div> */}
       </div>
     </>
   );
@@ -217,9 +342,26 @@ const InfoButtons = () => {
 const Speakers = () => {
   return (
     <>
-      <div className="min-h-[700px] bg-black flex flex-col w-full px-10 items-center gap-6">
+      {/* min-h-[700px] */}
+      <div
+        id="speakers"
+        className="min-h-[300px] bg-black flex flex-col w-full px-10 pt-[2rem] items-center gap-6"
+      >
         <h1 className="text-white text-3xl font-bold">SPEAKERS</h1>
-        <div className="grid sm:grid-cols-3 grid-cols-1 gap-12 items-center justify-center">
+        <Link to="/continue">
+          <button className="bg-[#FFF0D2] flex flex-row items-center justify-center gap-3 transition-all text-center text-xl text-black font-bold py-2 px-4 rounded-xl h-16 cursor-pointer">
+            OUR SPEAKERS
+            <img
+              src={Arrow}
+              alt=""
+              className=""
+              height="22"
+              width="22"
+              route="/continue"
+            />
+          </button>
+        </Link>
+        {/* <div className="grid sm:grid-cols-3 grid-cols-1 gap-12 items-center justify-center">
           <div className=" sm:h-[400px] h-[360px] w-80 flex flex-col items-center justify-center gap-4 border border-white rounded-2xl px-4 bg-[#000E24]">
             <img
               src={card1Img}
@@ -291,7 +433,7 @@ const Speakers = () => {
               Startup Mentor
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </>
   );
@@ -300,19 +442,24 @@ const Speakers = () => {
 const TicketBuying = () => {
   return (
     <>
-      <div className="bg-black min-h-screen flex flex-col w-full gap-8 items-center pt-20">
-        <a href="">
-          <button className="bg-[#FFF0D2] flex flex-row items-center justify-center gap-3 transition-all text-center text-xl text-black font-bold py-2 px-4 rounded-xl h-16">
-            BUY PASSES NOW
+      {/* min-h-screen */}
+      <div
+        id="tickets"
+        className="bg-black min-h-[300px] flex flex-col w-full gap-8 items-center pt-[2rem]"
+      >
+        <h1 className="text-white text-3xl font-bold">PASSES</h1>
+        <Link to="/continue">
+          <button className="bg-[#FFF0D2] flex flex-row items-center justify-center gap-3 transition-all text-center text-xl text-black font-bold py-2 px-4 rounded-xl h-16 cursor-pointer">
+            EVENT PASSES
             <img src={Arrow} alt="" className="" height="22" width="22" />
           </button>
-        </a>
-        <h1 className="text-white text-4xl font-bold">AVAILABLE PASSES</h1>
+        </Link>
+        {/* <h1 className="text-white text-4xl font-bold">AVAILABLE PASSES</h1>
         <div className="flex flex-col sm:gap-16 px-6 gap-16">
           <img src={Ticket1} alt="" className=" sm:h-[440px] w-full" />
           <img src={Ticket2} alt="" className=" sm:h-[440px] w-full" />
           <img src={Ticket3} alt="" className=" sm:h-[440px] w-full" />
-        </div>
+        </div> */}
       </div>
     </>
   );
@@ -321,12 +468,18 @@ const TicketBuying = () => {
 const Partners = () => {
   return (
     <>
-      <div className="flex flex-col h-fit items-center gap-10 bg-black pt-20">
+      {/* h-fit */}
+      <div
+        id="partners"
+        className="flex flex-col min-h-[300px] items-center gap-10 bg-black pt-20"
+      >
         <h1 className="text-white font-bold text-3xl">OUR PARTNERS</h1>
-        <button className="bg-gray-400 flex flex-row items-center justify-center gap-3 transition-all text-center text-xl text-black font-bold py-2 px-4 rounded-xl h-16">
-          PARTNERS REVEALING SOON
-          <img src={Passes_btn_heart} alt="" className="w-4" />
-        </button>
+        <Link to="/continue">
+          <button className="bg-gray-400 flex flex-row items-center justify-center gap-3 transition-all text-center text-xl text-black font-bold py-2 px-4 rounded-xl h-16 cursor-pointer">
+            PARTNERS REVEALING SOON
+            <img src={Passes_btn_heart} alt="" className="w-4" />
+          </button>
+        </Link>
       </div>
     </>
   );
@@ -335,7 +488,10 @@ const Partners = () => {
 const FAQ = () => {
   return (
     <>
-      <div className="bg-black w-full min-h-[400px] items-center flex flex-col pt-20 px-6">
+      <div
+        id="faqs"
+        className="bg-black w-full min-h-[400px] items-center flex flex-col pt-20 px-6"
+      >
         <h1 className="text-white text-3xl font-bold pb-6">
           FREQUENTLY ASKED QUESTIONS
         </h1>
@@ -445,51 +601,69 @@ const FAQ = () => {
 const Footer = () => {
   return (
     <>
-      <footer className="flex flex-col gap-10 h-full w-full bg-black pt-20">
+      <footer
+        id="contact"
+        className="flex flex-col gap-10 h-full w-full bg-black pt-20"
+      >
         <div className="mx-auto w-full sm:max-w-full max-w-screen-xl px-10 py-6 lg:py-8">
           <div className="md:flex md:justify-between">
-              <div className=" mb-6 md:mb-0">
-                <a className="flex items-center">
-                  <img src={navLogo} alt="" className="w-70" />
-                </a>
-              </div>
-              <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-2">
+            <div className="flex flex-col gap-1 mb-6 md:mb-0">
+              <a className="flex items-center">
+                <img src={navLogo} alt="" className="w-70" />
+              </a>
+              <div className="flex sm:flex-row flex-col gap-4 text-white sm:text-justify text-justify pt-5">
                 <div>
-                  <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
-                    FOLLOW US
-                  </h2>
-                  <ul className="text-gray-500 dark:text-gray-400 font-medium">
-                    <li className="mb-4">
-                      <a href="" className="hover:underline">
-                        Instagram
-                      </a>
-                    </li>
-                    <li>
-                      <a href="" className="hover:underline">
-                        LinkedIn
-                      </a>
-                    </li>
-                  </ul>
+                  <p>Organizer: Paridhi Harit</p>
+                  <p>(paridhiharit@gmail.com)</p>
                 </div>
                 <div>
-                  <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
-                    LEGAL
-                  </h2>
-                  <ul className="text-gray-500 dark:text-gray-400 font-medium">
-                    <li className="mb-4">
-                      <a href="" className="hover:underline">
-                        Privacy Policy
-                      </a>
-                    </li>
-                    <li>
-                      <a href="" className="hover:underline">
-                        Terms & Conditions
-                      </a>
-                    </li>
-                  </ul>
+                  <p>Co-organizer: Riddhi Gupta</p>
+                  <p>(riddhigupta@gmail.com)</p>
                 </div>
               </div>
-            
+            </div>
+            <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-2">
+              <div>
+                <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+                  FOLLOW US
+                </h2>
+                <ul className="text-gray-500 dark:text-gray-400 font-medium">
+                  <li className="mb-4">
+                    <a
+                      href="https://www.instagram.com/tedxbvcoe.2024/"
+                      className="hover:underline"
+                    >
+                      Instagram
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.linkedin.com/company/tedx-bvcoe/posts/?feedView=all"
+                      className="hover:underline"
+                    >
+                      LinkedIn
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+                  LEGAL
+                </h2>
+                <ul className="text-gray-500 dark:text-gray-400 font-medium">
+                  <li className="mb-4">
+                    <a href="" className="hover:underline">
+                      Privacy Policy
+                    </a>
+                  </li>
+                  <li>
+                    <a href="" className="hover:underline">
+                      Terms & Conditions
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
           <hr className="text-gray-700my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
           <div className="sm:flex sm:flex-row flex flex-col gap-2 sm:items-center sm:justify-between">
@@ -503,17 +677,20 @@ const Footer = () => {
             <span className="flex gap-1.5 text-md text-grayc-500 sm:text-center dark:text-gray-400">
               <div>Developed by</div>
               <div>
-                <a href="" className="underline">
+                <a
+                  href="https://linktr.ee/Aditya__Shrivastav?utm_source=linktree_admin_share"
+                  className="underline"
+                >
                   Aditya Shrivastav
                 </a>
               </div>
             </span>
             <div className="flex mt-4 sm:justify-center gap-6 items-center sm:mt-0">
-              <a href="" className="">
-                <img src={insta_logo} alt="" className="w-14"/>
+              <a href="https://www.instagram.com/tedxbvcoe.2024/" className="">
+                <img src={insta_logo} alt="" className="w-14" />
               </a>
-              <a href="">
-                <img src={linkedIn_logo} alt="" className="w-8"/>
+              <a href="https://www.linkedin.com/company/tedx-bvcoe/posts/?feedView=all">
+                <img src={linkedIn_logo} alt="" className="w-8" />
               </a>
             </div>
           </div>
@@ -521,6 +698,33 @@ const Footer = () => {
       </footer>
     </>
   );
+};
+
+const scrollToElement = (elementId, duration) => {
+  const target = document.getElementById(elementId);
+  if (!target) return;
+
+  const startPosition = window.pageYOffset;
+  const targetPosition = target.getBoundingClientRect().top + startPosition;
+  const startTime = performance.now();
+
+  const easeInOutQuad = (t) =>
+    t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
+
+  const animateScroll = (currentTime) => {
+    const timeElapsed = currentTime - startTime;
+    const progress = easeInOutQuad(timeElapsed / duration);
+    const run = progress * (targetPosition - startPosition) + startPosition;
+    window.scrollTo(0, run);
+
+    if (timeElapsed < duration) {
+      requestAnimationFrame(animateScroll);
+    } else {
+      window.scrollTo(0, targetPosition);
+    }
+  };
+
+  requestAnimationFrame(animateScroll);
 };
 
 export default App;
