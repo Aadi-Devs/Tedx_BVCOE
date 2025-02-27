@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+
+
+
 /* Initial state, positioned off-screen */
 
 .slide-out {
@@ -22,3 +25,31 @@
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
   }
  
+
+
+
+/* Merch */
+
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+  .polo img{
+    /* height: 150%; */
+    width: 70%;
+  }
+  .round_neck img{
+    /* height: 150%; */
+    width: 70%;
+  }
+
+
+  #speakers{
+    padding-top: 5rem;
+  }
+  #tickets{
+    padding-top: 5rem;
+  }
+  #partners{
+    padding-top: 5rem;
+  }
+}

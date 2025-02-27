@@ -8,13 +8,19 @@ import heroImg2 from "./assets/heroImg2.svg";
 import navMobileMenu from "./assets/navMobileMenu.svg";
 import year from "./assets/2025.svg";
 import Passes_btn_heart from "./assets/Passes_btn_heart.png";
-import infoButtonImgLeft from "./assets/infoButtonImgLeft.svg";
-import infoButtonImgRight from "./assets/infoButtonImgRight.svg";
-import infoButtonImgLeftMobile from "./assets/infoButtonImgLeftMobile.svg";
-import infoButtonImgRightMobile from "./assets/infoButtonImgRightMobile.svg";
+// import infoButtonImgLeft from "./assets/infoButtonImgLeft.svg";
+// import infoButtonImgRight from "./assets/infoButtonImgRight.svg";
+// import infoButtonImgLeftMobile from "./assets/infoButtonImgLeftMobile.svg";
+// import infoButtonImgRightMobile from "./assets/infoButtonImgRightMobile.svg";
 import Arrow from "./assets/Arrow.png";
 import insta_logo from "./assets/insta_logo.png";
 import linkedIn_logo from "./assets/linkedIn_logo.png";
+import march from "./assets/march.png";
+import date from "./assets/2025.png";
+import polo_front from "./assets/polo_front.png";
+import polo_back from "./assets/polo_back.png";
+import round_neck_front from "./assets/round_neck_front.png";
+import round_neck_back from "./assets/round_neck_back.png";
 import { Link } from "react-router-dom";
 import "aos/dist/aos.css";
 
@@ -35,19 +41,21 @@ const App = () => {
     <>
       <Navbar />
       <Hero />
-      <PassesButton />
-      <InfoButtons />
-      <Speakers />
-      <TicketBuying />
-      <Partners />
-      <FAQ />
-      <Footer />
+      <div className="flex flex-col gap-10 bg-black">
+        <PassesButton />
+        <InfoButtons />
+        <Speakers />
+        <TicketBuying />
+        <Partners />
+        <Merch />
+        <FAQ />
+        <Footer />
+      </div>
     </>
   );
 };
 
 const Navbar = () => {
-
   const [isOpen, setIsOpen] = useState(false);
 
   const handleToggle = () => {
@@ -103,11 +111,14 @@ const Navbar = () => {
       </nav>
 
       {/* mobile menu */}
-      <nav className="navbar h-screen fixed w-full bg-black sm:hidden flex flex-row items-center justify-between px-4 py-[1.55rem]">
+      <nav className="navbar h-screen fixed w-full bg-black sm:hidden flex flex-row items-center justify-between px-4 py-[1.55rem] z-[120]">
         <a className="" href="/">
           <img src={navLogo} alt="" width="134" height="30" />
         </a>
-        <button className="ham-burger-button custom:hidden cursor-pointer" onClick={handleToggle}>
+        <button
+          className="ham-burger-button custom:hidden cursor-pointer"
+          onClick={handleToggle}
+        >
           <img
             src={navMobileMenu}
             alt=""
@@ -164,8 +175,6 @@ const Navbar = () => {
   );
 };
 
-
-
 const Hero = () => {
   return (
     <>
@@ -176,18 +185,17 @@ const Hero = () => {
           className="static sm:h-full h-screen w-full object-cover object-center items-center justify-center"
         />
         <div className="top-20 z-10 bg-black opacity-80 absolute sm:h-[1172px] h-screen w-full"></div>
-        <div className="absolute flex sm:flex-row flex-col sm:top-80 top-40 w-full sm:justify-evenly sm:gap-0 gap-24 items-center">
+        <div className="absolute flex sm:flex-row flex-col sm:top-80 top-40 w-full sm:justify-between sm:gap-0 gap-12 items-center pt-6 sm:px-13.5">
           <img src={heroImg1} alt="" className="sm:w-[500px] w-[300px] z-20" />
-          <img
+          {/* <img
             src={heroImgMobile}
             alt=""
             className="sm:invisible visible w-[300px] z-20"
-          />
-          <img
-            src={heroImg2}
-            alt=""
-            className="sm:w-[500px] sm:visible invisible w-[300px] z-20"
-          />
+          /> */}
+          <div className="dates flex flex-col h-full justify-center sm:items-end items-start sm:pt-26 z-20">
+            <img src={march} alt="" height="" width="" className="sm:h-full sm:w-[100%] h-[100px]  w-[300px]" />
+            <img src={date} alt="" height="" width=""  className="sm:h-full sm:w-[50%] h-[100px]  w-[300px]" />
+          </div>
         </div>
       </div>
     </>
@@ -198,9 +206,9 @@ const PassesButton = () => {
   return (
     <div className="sm:h-[480px] h-[250px] w-full bg-black flex flex-col items-center">
       <img src={year} alt="" width="1682" height="250" className="" />
-      <div className="flex h-full items-center">
+      <div className="flex h-full items-center z-[100] pt-25">
         <Link onClick={() => scrollToElement("tickets", 1000)}>
-          <button className="bg-gray-400 flex flex-row items-center justify-center gap-3 transition-all text-center text-xl text-black font-bold py-2 px-4 rounded-xl h-16 cursor-pointer">
+          <button className="bg-gray-400 flex flex-row items-center justify-center gap-3 transition-all text-center text-xl text-black font-bold py-2 px-4 rounded-xl h-16 cursor-pointer ">
             GET PASSES NOW
             <img src={Passes_btn_heart} alt="" className="w-4" />
           </button>
@@ -210,6 +218,94 @@ const PassesButton = () => {
   );
 };
 
+// const InfoButtons = () => {
+//   const [openIndex, setOpenIndex] = useState(0);
+
+//   const items = [
+//     {
+//       title: "TED",
+//       content:
+//         "TED (Technology, Entertainment, Design) is a global platform that hosts conferences featuring influential speakers from various fields who share their innovative ideas and experiences. Founded in 1984,TED has become synonymous with Ideas Worth Spreading.The main TED conference is held annually in Vancouver, Canada, and its talks cover a wide range of topics, including science.",
+//     },
+//     {
+//       title: "TEDx",
+//       content:
+//         "TEDx events are independently organized TED-like conferences that can take place anywhere in the world. These events aim to bring the spirit of TED to local communities and provide a platform for individuals to share their ideas and perspectives. TEDx talks cover a broad spectrum of subjects, often reflecting the unique challenges and innovations of a particular region. year.",
+//     },
+//     {
+//       title: "TEDxBVCOE",
+//       content:
+//         "TEDxBVCOE is a specific instance of a TEDx event affiliated with Bharati Vidyapeeth College of Engineering (BVCOE) in Delhi, India. Organized independently by a dedicated local team of volunteers, TEDxBVCOE serves as a platform for students, educators, and professionals to share their insights and ideas with the community. The BVCOE in TEDxBVCOE represents Bharati Vidyapeeth College of Engineering, the hosting institution.",
+//     },
+//   ];
+
+//   return (
+//     <>
+//       <div className="flex relative w-full flex-col items-center pt-20 sm:h-[600px] h-[700px] bg-black gap-10">
+//         <img
+//           src={infoButtonImgLeft}
+//           alt=""
+//           height="450"
+//           width="450"
+//           className="absolute sm:visible invisible left-0 -top-20"
+//         />
+//         <img
+//           src={infoButtonImgRight}
+//           alt=""
+//           height="450"
+//           width="450"
+//           className="absolute sm:visible invisible right-0 -top-20"
+//         />
+//         <img
+//           src={infoButtonImgLeftMobile}
+//           alt=""
+//           width="190"
+//           height="500"
+//           className="left-0 absolute sm:invisible visible top-36"
+//         />
+//         <img
+//           src={infoButtonImgRightMobile}
+//           alt=""
+//           width="190"
+//           height="500"
+//           className="right-0 absolute sm:invisible visible top-36"
+//         />
+//         <h1 className=" text-white text-2xl font-bold top-0 uppercase">
+//           WHAT IS TED?
+//         </h1>
+
+//         {/* NEW CODE */}
+
+//         <div className="flex flex-col items-center sm:w-[600px] w-full gap-4 bg-black text-white p-5">
+//           <div className="flex space-x-2 mb-4 gap-5">
+//             {items.map((item, index) => (
+//               <button
+//                 key={index}
+//                 className="bg-none text-white sm:h-16 h-14 sm:px-8 px-4 py-2 items-center justify-center border-2 border-white rounded-xl font-bold cursor-pointer"
+//                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
+//               >
+//                 {item.title}
+//               </button>
+//             ))}
+//           </div>
+//           {items.map((item, index) => (
+//             <div
+//               key={index}
+//               className={`transition-all duration-300 ${
+//                 openIndex === index ? "max-h-40" : "max-h-0 overflow-hidden"
+//               }`}
+//             >
+//               <p className="text-white font-medium text-xl sm:text-justify text-justify">
+//                 {item.content}
+//               </p>
+//             </div>
+//           ))}
+//         </div>
+//       </div>
+//     </>
+//   );
+// };
+
 const InfoButtons = () => {
   const [openIndex, setOpenIndex] = useState(0);
 
@@ -217,12 +313,12 @@ const InfoButtons = () => {
     {
       title: "TED",
       content:
-        "TED (Technology, Entertainment, Design) is a global platform that hosts conferences featuring influential speakers from various fields who share their innovative ideas and experiences. Founded in 1984,TED has become synonymous with Ideas Worth Spreading.The main TED conference is held annually in Vancouver, Canada, and its talks cover a wide range of topics, including science.",
+        "TED (Technology, Entertainment, Design) is a global platform that hosts conferences featuring influential speakers from various fields who share their innovative ideas and experiences. Founded in 1984, TED has become synonymous with Ideas Worth Spreading. The main TED conference is held annually in Vancouver, Canada, and its talks cover a wide range of topics, including science.",
     },
     {
       title: "TEDx",
       content:
-        "TEDx events are independently organized TED-like conferences that can take place anywhere in the world. These events aim to bring the spirit of TED to local communities and provide a platform for individuals to share their ideas and perspectives. TEDx talks cover a broad spectrum of subjects, often reflecting the unique challenges and innovations of a particular region. year.",
+        "TEDx events are independently organized TED-like conferences that can take place anywhere in the world. These events aim to bring the spirit of TED to local communities and provide a platform for individuals to share their ideas and perspectives. TEDx talks cover a broad spectrum of subjects, often reflecting the unique challenges and innovations of a particular region.",
     },
     {
       title: "TEDxBVCOE",
@@ -232,110 +328,37 @@ const InfoButtons = () => {
   ];
 
   return (
-    <>
-      <div className="flex relative w-full flex-col items-center pt-20 sm:h-[600px] h-[700px] bg-black gap-10">
-        <img
-          src={infoButtonImgLeft}
-          alt=""
-          height="450"
-          width="450"
-          className="absolute sm:visible invisible left-0 -top-20"
-        />
-        <img
-          src={infoButtonImgRight}
-          alt=""
-          height="450"
-          width="450"
-          className="absolute sm:visible invisible right-0 -top-20"
-        />
-        <img
-          src={infoButtonImgLeftMobile}
-          alt=""
-          width="190"
-          height="500"
-          className="left-0 absolute sm:invisible visible top-36"
-        />
-        <img
-          src={infoButtonImgRightMobile}
-          alt=""
-          width="190"
-          height="500"
-          className="right-0 absolute sm:invisible visible top-36"
-        />
-        <h1 className=" text-white text-2xl font-bold top-0 uppercase">
-          WHAT IS TED?
-        </h1>
+    <div className="flex relative w-full flex-col items-center justify-center sm:h-[600px] h-[700px] bg-black gap-10">
+      <h1 className="text-white text-2xl font-bold top-0 uppercase">
+        WHAT IS TED?
+      </h1>
 
-        {/* NEW CODE */}
-
-        <div className="flex flex-col items-center sm:w-[600px] w-full gap-4 bg-black text-white p-5">
-          <div className="flex space-x-2 mb-4 gap-5">
-            {items.map((item, index) => (
-              <button
-                key={index}
-                className="bg-none text-white sm:h-16 h-14 sm:px-8 px-4 py-2 items-center justify-center border-2 border-white rounded-xl font-bold cursor-pointer"
-                onClick={() => setOpenIndex(openIndex === index ? null : index)}
-              >
-                {item.title}
-              </button>
-            ))}
-          </div>
+      <div className="flex flex-col items-center sm:w-[600px] w-full gap-4 bg-black text-white p-5">
+        <div className="flex flex-wrap justify-center mb-4 gap-5">
           {items.map((item, index) => (
-            <div
+            <button
               key={index}
-              className={`transition-all duration-300 ${
-                openIndex === index ? "max-h-40" : "max-h-0 overflow-hidden"
-              }`}
+              className="bg-none text-white h-14 sm:px-8 px-4 py-2 items-center justify-center border-2 border-white rounded-xl font-bold cursor-pointer"
+              onClick={() => setOpenIndex(openIndex === index ? null : index)}
             >
-              <p className="text-white font-medium text-xl sm:text-justify text-justify">
-                {item.content}
-              </p>
-            </div>
+              {item.title}
+            </button>
           ))}
         </div>
-
-        {/* OlD CODE */}
-
-        {/* <div className=" flex flex-row items-center justify-center gap-4">
-          <button className="bg-none text-white sm:h-16 h-14 sm:px-8 px-4 py-2 items-center justify-center border-2 border-white rounded-xl font-bold">
-            TED
-          </button>
-          <button className="bg-none text-white sm:h-16 h-14 sm:px-8 px-4 py-2 items-center justify-center border-2 border-white rounded-xl font-bold">
-            TEDx
-          </button>
-          <button className="bg-white text-black sm:h-16 h-14 sm:px-8 px-4 py-2 items-center justify-center border-2 border-white rounded-xl font-bold">
-            TEDxBVCOE
-          </button>
-        </div>
-        <div className=" sm:w-[600px] font-medium px-10">
-          <p className="flex text-white text-xl sm:text-justify text-justify">
-            TED (Technology, Entertainment, Design) is a global platform that
-            hosts conferences featuring influential speakers from various fields
-            who share their innovative ideas and experiences. Founded in 1984,
-            TED has become synonymous with "Ideas Worth Spreading." The main TED
-            conference is held annually in Vancouver, Canada, and its talks
-            cover a wide range of topics, including science.
-          </p>
-          <p className="hidden text-white text-xl sm:text-justify text-justify">
-            TEDx events are independently organized TED-like conferences that
-            can take place anywhere in the world. These events aim to bring the
-            spirit of TED to local communities and provide a platform for
-            individuals to share their ideas and perspectives. TEDx talks cover
-            a broad spectrum of subjects, often reflecting the unique challenges
-            and innovations of a particular region. year.
-          </p>
-          <p className="hidden text-white text-xl sm:text-justify text-justify">
-            TEDxBVCOE is a specific instance of a TEDx event affiliated with
-            Bharati Vidyapeeth College of Engineering (BVCOE) in Delhi, India.
-            Organized independently by a dedicated local team of volunteers,
-            TEDxBVCOE serves as a platform for students, educators, and
-            professionals to share their insights and ideas with the community.
-            The "BVCOE" in TEDxBVCOE represents Bharati Vidyapeeth College of
-            Engineering, the hosting institution.
-          </p>
-        </div> */}
+        {items.map((item, index) => (
+          <div
+            key={index}
+            className={`transition-all duration-300 ${
+              openIndex === index ? "max-h-40" : "max-h-0 overflow-hidden"
+            }`}
+          >
+            <p className="text-white font-medium text-xl sm:text-justify text-justify">
+              {item.content}
+            </p>
+          </div>
+        ))}
       </div>
-    </>
+    </div>
   );
 };
 
@@ -345,7 +368,7 @@ const Speakers = () => {
       {/* min-h-[700px] */}
       <div
         id="speakers"
-        className="min-h-[300px] bg-black flex flex-col w-full px-10 pt-[2rem] items-center gap-6"
+        className="min-h-[300px] bg-black flex flex-col w-full px-10 pt-10 items-center gap-6"
       >
         <h1 className="text-white text-3xl font-bold">SPEAKERS</h1>
         <Link to="/continue">
@@ -445,7 +468,7 @@ const TicketBuying = () => {
       {/* min-h-screen */}
       <div
         id="tickets"
-        className="bg-black min-h-[300px] flex flex-col w-full gap-8 items-center pt-[2rem]"
+        className="bg-black min-h-[300px] flex flex-col pt-10 w-full gap-8 items-center "
       >
         <h1 className="text-white text-3xl font-bold">PASSES</h1>
         <Link to="/continue">
@@ -471,7 +494,7 @@ const Partners = () => {
       {/* h-fit */}
       <div
         id="partners"
-        className="flex flex-col min-h-[300px] items-center gap-10 bg-black pt-20"
+        className="flex flex-col min-h-[300px] items-center pt-10 gap-10 bg-black "
       >
         <h1 className="text-white font-bold text-3xl">OUR PARTNERS</h1>
         <Link to="/continue">
@@ -485,12 +508,37 @@ const Partners = () => {
   );
 };
 
+const Merch = () => {
+  return (
+    <>
+      <div className="min-h-[600px] bg-black flex flex-col w-full px-10 pt-20 items-center gap-20 overflow-hidden">
+        <div>
+          <h1 className="text-white text-3xl font-bold">OUR MERCH</h1>
+        </div>
+
+        <div className="flex flex-col items-center gap-20">
+          {/* for polo */}
+          <div className="polo flex sm:flex-row flex-col sm:gap-[10rem] gap-[5rem] m-2 space-y-2 justify-center items-center bg-black">
+            <img src={polo_front} alt="" width="30%" height="60%" />
+            <img src={polo_back} alt="" width="30%" height="60%" />
+          </div>
+          {/* for round neck */}
+          <div className="round_neck flex sm:flex-row flex-col sm:gap-[10rem] gap-[5rem] m-2 space-y-2 justify-center items-center bg-black">
+            <img src={round_neck_front} alt="" width="30%" height="60%" />
+            <img src={round_neck_back} alt="" width="30%" height="60%" />
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+
 const FAQ = () => {
   return (
     <>
       <div
         id="faqs"
-        className="bg-black w-full min-h-[400px] items-center flex flex-col pt-20 px-6"
+        className="bg-black w-full min-h-[400px] items-center pt-20 flex flex-col px-6"
       >
         <h1 className="text-white text-3xl font-bold pb-6">
           FREQUENTLY ASKED QUESTIONS
@@ -614,11 +662,11 @@ const Footer = () => {
               <div className="flex sm:flex-row flex-col gap-4 text-white sm:text-justify text-justify pt-5">
                 <div>
                   <p>Organizer: Paridhi Harit</p>
-                  <p>(paridhiharit@gmail.com)</p>
+                  <p>(Paridhi.tedxbvcoe@gmail.com)</p>
                 </div>
                 <div>
-                  <p>Co-organizer: Riddhi Gupta</p>
-                  <p>(riddhigupta@gmail.com)</p>
+                  <p>Co-organizer: Ridhi Gupta</p>
+                  <p>(ridhig.047@gmail.com)</p>
                 </div>
               </div>
             </div>
