@@ -3,26 +3,32 @@ import "./index.css";
 import navLogo from "./assets/navLogo.svg";
 import homeLogo from "./assets/homeLogo.svg";
 import heroImg1 from "./assets/heroImg1.svg";
-import heroImgMobile from "./assets/heroImgMobile.svg";
-import heroImg2 from "./assets/heroImg2.svg";
 import navMobileMenu from "./assets/navMobileMenu.svg";
 import year from "./assets/2025.svg";
 import Passes_btn_heart from "./assets/Passes_btn_heart.png";
-// import infoButtonImgLeft from "./assets/infoButtonImgLeft.svg";
-// import infoButtonImgRight from "./assets/infoButtonImgRight.svg";
-// import infoButtonImgLeftMobile from "./assets/infoButtonImgLeftMobile.svg";
-// import infoButtonImgRightMobile from "./assets/infoButtonImgRightMobile.svg";
 import Arrow from "./assets/Arrow.png";
 import insta_logo from "./assets/insta_logo.png";
 import linkedIn_logo from "./assets/linkedIn_logo.png";
 import march from "./assets/march.png";
 import date from "./assets/2025.png";
+import Ticket1 from "./assets/Ticket_1.png";
+import Ticket2 from "./assets/Ticket_2.png";
+import Ticket3 from "./assets/Ticket_3.png";
+import Ticket4 from "./assets/Ticket_4.png";
+import Ticket5 from "./assets/Ticket_5.png";
 import polo_front from "./assets/polo_front.png";
 import polo_back from "./assets/polo_back.png";
 import round_neck_front from "./assets/round_neck_front.png";
 import round_neck_back from "./assets/round_neck_back.png";
 import { Link } from "react-router-dom";
 import "aos/dist/aos.css";
+
+// import heroImgMobile from "./assets/heroImgMobile.svg";
+// import heroImg2 from "./assets/heroImg2.svg";
+// import infoButtonImgLeft from "./assets/infoButtonImgLeft.svg";
+// import infoButtonImgRight from "./assets/infoButtonImgRight.svg";
+// import infoButtonImgLeftMobile from "./assets/infoButtonImgLeftMobile.svg";
+// import infoButtonImgRightMobile from "./assets/infoButtonImgRightMobile.svg";
 
 // import { Accordion, Button } from "@material-tailwind/react";
 // import { NavArrowDown } from "iconoir-react";
@@ -41,12 +47,16 @@ const App = () => {
     <>
       <Navbar />
       <Hero />
+
       <div className="flex flex-col gap-10 bg-black">
         <PassesButton />
         <InfoButtons />
         <Speakers />
         <TicketBuying />
         <Partners />
+
+        <Team />
+
         <Merch />
         <FAQ />
         <Footer />
@@ -54,6 +64,8 @@ const App = () => {
     </>
   );
 };
+
+export default App;
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -64,7 +76,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="navbar h-full w-full bg-black sm:flex hidden justify-between items-center overflow-hidden flex-row sm:px-6 sm:py-[0.94rem]">
+      <nav id="nav" className="navbar h-full w-full bg-black sm:flex hidden justify-between items-center overflow-hidden flex-row sm:px-6 sm:py-[0.94rem]">
         <div className="flex text-white text-xl gap-5">
           <Link
             href="#speakers"
@@ -87,6 +99,13 @@ const Navbar = () => {
           >
             PARTNERS
           </Link>
+          <Link
+            href="#team"
+            className=""
+            onClick={() => scrollToElement("team", 1400)}
+          >
+            OUR TEAM
+          </Link>
         </div>
         <div className="navbar-brand">
           <img src={navLogo} alt="" className="w-[14rem]" />
@@ -95,14 +114,14 @@ const Navbar = () => {
           <Link
             href="#faqs"
             className=""
-            onClick={() => scrollToElement("faqs", 1400)}
+            onClick={() => scrollToElement("faqs", 1600)}
           >
             FAQs
           </Link>
           <Link
             href="#contact"
             className=""
-            onClick={() => scrollToElement("contact", 1600)}
+            onClick={() => scrollToElement("contact", 1800)}
           >
             CONTACT
           </Link>
@@ -152,19 +171,25 @@ const Navbar = () => {
             </Link>
             <Link
               className="p-5 xl:p-8 text-white font-bold hover:text-underline"
-              onClick={() => scrollToElement("faqs", 1400)}
+              onClick={() => scrollToElement("team", 1400)}
+            >
+              OUR TEAM
+            </Link>
+            <Link
+              className="p-5 xl:p-8 text-white font-bold hover:text-underline"
+              onClick={() => scrollToElement("faqs", 1600)}
             >
               FAQs
             </Link>
             <Link
               className="p-5 xl:p-8 text-white font-bold hover:text-underline"
-              onClick={() => scrollToElement("contact", 1600)}
+              onClick={() => scrollToElement("contact", 1800)}
             >
               CONTACT
             </Link>
             <Link
               className="p-5 xl:p-8 text-white font-bold hover:text-underline"
-              to=""
+              onClick={() => scrollToElement("hero", 1200)}
             >
               TedxBVCOE25
             </Link>
@@ -178,7 +203,7 @@ const Navbar = () => {
 const Hero = () => {
   return (
     <>
-      <div className="">
+      <div id="hero" className="">
         <img
           src={homeLogo}
           alt=""
@@ -193,8 +218,20 @@ const Hero = () => {
             className="sm:invisible visible w-[300px] z-20"
           /> */}
           <div className="dates flex flex-col h-full justify-center sm:items-end items-start sm:pt-26 z-20">
-            <img src={march} alt="" height="" width="" className="sm:h-full sm:w-[100%] h-[100px]  w-[300px]" />
-            <img src={date} alt="" height="" width=""  className="sm:h-full sm:w-[50%] h-[100px]  w-[300px]" />
+            <img
+              src={march}
+              alt=""
+              height=""
+              width=""
+              className="sm:h-full sm:w-[100%] h-[100px]  w-[300px]"
+            />
+            <img
+              src={date}
+              alt=""
+              height=""
+              width=""
+              className="sm:h-full sm:w-[50%] h-[100px]  w-[300px]"
+            />
           </div>
         </div>
       </div>
@@ -217,94 +254,6 @@ const PassesButton = () => {
     </div>
   );
 };
-
-// const InfoButtons = () => {
-//   const [openIndex, setOpenIndex] = useState(0);
-
-//   const items = [
-//     {
-//       title: "TED",
-//       content:
-//         "TED (Technology, Entertainment, Design) is a global platform that hosts conferences featuring influential speakers from various fields who share their innovative ideas and experiences. Founded in 1984,TED has become synonymous with Ideas Worth Spreading.The main TED conference is held annually in Vancouver, Canada, and its talks cover a wide range of topics, including science.",
-//     },
-//     {
-//       title: "TEDx",
-//       content:
-//         "TEDx events are independently organized TED-like conferences that can take place anywhere in the world. These events aim to bring the spirit of TED to local communities and provide a platform for individuals to share their ideas and perspectives. TEDx talks cover a broad spectrum of subjects, often reflecting the unique challenges and innovations of a particular region. year.",
-//     },
-//     {
-//       title: "TEDxBVCOE",
-//       content:
-//         "TEDxBVCOE is a specific instance of a TEDx event affiliated with Bharati Vidyapeeth College of Engineering (BVCOE) in Delhi, India. Organized independently by a dedicated local team of volunteers, TEDxBVCOE serves as a platform for students, educators, and professionals to share their insights and ideas with the community. The BVCOE in TEDxBVCOE represents Bharati Vidyapeeth College of Engineering, the hosting institution.",
-//     },
-//   ];
-
-//   return (
-//     <>
-//       <div className="flex relative w-full flex-col items-center pt-20 sm:h-[600px] h-[700px] bg-black gap-10">
-//         <img
-//           src={infoButtonImgLeft}
-//           alt=""
-//           height="450"
-//           width="450"
-//           className="absolute sm:visible invisible left-0 -top-20"
-//         />
-//         <img
-//           src={infoButtonImgRight}
-//           alt=""
-//           height="450"
-//           width="450"
-//           className="absolute sm:visible invisible right-0 -top-20"
-//         />
-//         <img
-//           src={infoButtonImgLeftMobile}
-//           alt=""
-//           width="190"
-//           height="500"
-//           className="left-0 absolute sm:invisible visible top-36"
-//         />
-//         <img
-//           src={infoButtonImgRightMobile}
-//           alt=""
-//           width="190"
-//           height="500"
-//           className="right-0 absolute sm:invisible visible top-36"
-//         />
-//         <h1 className=" text-white text-2xl font-bold top-0 uppercase">
-//           WHAT IS TED?
-//         </h1>
-
-//         {/* NEW CODE */}
-
-//         <div className="flex flex-col items-center sm:w-[600px] w-full gap-4 bg-black text-white p-5">
-//           <div className="flex space-x-2 mb-4 gap-5">
-//             {items.map((item, index) => (
-//               <button
-//                 key={index}
-//                 className="bg-none text-white sm:h-16 h-14 sm:px-8 px-4 py-2 items-center justify-center border-2 border-white rounded-xl font-bold cursor-pointer"
-//                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
-//               >
-//                 {item.title}
-//               </button>
-//             ))}
-//           </div>
-//           {items.map((item, index) => (
-//             <div
-//               key={index}
-//               className={`transition-all duration-300 ${
-//                 openIndex === index ? "max-h-40" : "max-h-0 overflow-hidden"
-//               }`}
-//             >
-//               <p className="text-white font-medium text-xl sm:text-justify text-justify">
-//                 {item.content}
-//               </p>
-//             </div>
-//           ))}
-//         </div>
-//       </div>
-//     </>
-//   );
-// };
 
 const InfoButtons = () => {
   const [openIndex, setOpenIndex] = useState(0);
@@ -468,21 +417,23 @@ const TicketBuying = () => {
       {/* min-h-screen */}
       <div
         id="tickets"
-        className="bg-black min-h-[300px] flex flex-col pt-10 w-full gap-8 items-center "
+        className="bg-black min-h-screen flex flex-col pt-10 w-full gap-8 items-center "
       >
         <h1 className="text-white text-3xl font-bold">PASSES</h1>
-        <Link to="/continue">
+        {/* <Link to="/continue">
           <button className="bg-[#FFF0D2] flex flex-row items-center justify-center gap-3 transition-all text-center text-xl text-black font-bold py-2 px-4 rounded-xl h-16 cursor-pointer">
             EVENT PASSES
             <img src={Arrow} alt="" className="" height="22" width="22" />
           </button>
-        </Link>
-        {/* <h1 className="text-white text-4xl font-bold">AVAILABLE PASSES</h1>
+        </Link> */}
+        <h1 className="text-white text-4xl font-bold">AVAILABLE PASSES</h1>
         <div className="flex flex-col sm:gap-16 px-6 gap-16">
           <img src={Ticket1} alt="" className=" sm:h-[440px] w-full" />
           <img src={Ticket2} alt="" className=" sm:h-[440px] w-full" />
           <img src={Ticket3} alt="" className=" sm:h-[440px] w-full" />
-        </div> */}
+          <img src={Ticket4} alt="" className=" sm:h-[440px] w-full" />
+          <img src={Ticket5} alt="" className=" sm:h-[440px] w-full" />
+        </div>
       </div>
     </>
   );
@@ -503,6 +454,245 @@ const Partners = () => {
             <img src={Passes_btn_heart} alt="" className="w-4" />
           </button>
         </Link>
+      </div>
+    </>
+  );
+};
+
+const Team = () => {
+  return (
+    <>
+      <div id="team" className="flex flex-col gap-20 h-full w-full bg-black p-10 ">
+        <div className="w-full">
+          <h1 className="text-3xl font-bold text-white text-center">
+            OUR TEAM
+          </h1>
+        </div>
+
+        {/* Organizers */}
+        <div className="h-1/2 w-full flex flex-col sm:flex-row p-10 gap-10 items-center justify-center pt-14">
+          <div className="sm:w-2/5  text-center">
+            <h1 className="text-white text-3xl font-bold sm:mb-0 mb-10">OUR ORGANIZERS</h1>
+          </div>
+
+          <div className="lg:w-3/5 w-full flex flex-col sm:flex-row gap-30 items-center justify-center">
+            <img
+              // src={Ticket1}
+              alt=""
+              className="w-56 h-70 rounded-2xl object-cover md:mt-20 min-[450px]:mr-0 hover:border-red-600 hover:border-2"
+            />
+            <img
+              // src={Ticket2}
+              alt=""
+              className="w-56 h-70 rounded-2xl object-cover md:mt-20 min-[450px]:mr-0 hover:border-red-600 hover:border-2"
+            />
+          </div>
+        </div>
+
+        {/* Core Team */}
+        <div className="w-full h-full">
+          <section class="bg-black">
+            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+              <div class="flex justify-between items-center flex-col lg:flex-row md:mt-20">
+                <div class="w-full lg:w-1/2">
+                  <h2 class="w-full font-manrope text-3xl text-white text-center font-bold leading-[4rem] mb-7 lg:text-left lg:pl-14">
+                    OUR CORE TEAM
+                  </h2>
+                  {/* <p class="text-lg text-gray-500 mb-16 text-center lg:text-left">
+                    These people work on making our product best.
+                  </p> */}
+                  {/* <button class="cursor-pointer py-3 px-8 w-60 bg-indigo-600 text-white text-base font-semibold transition-all duration-500 block text-center rounded-full hover:bg-indigo-700 mx-auto lg:mx-0">
+                    Join our team
+                  </button> */}
+                </div>
+                <div class="w-full lg:w-1/2 lg:mt-0 md:mt-40 mt-16 max-lg:max-w-2xl">
+                  <div class="grid grid-cols-1 min-[450px]:grid-cols-2 md:grid-cols-3 gap-8">
+                    <img
+                      // src="https://pagedone.io/asset/uploads/1696238644.png"
+                      alt="Team tailwind section"
+                      class="w-52 h-60 rounded-2xl object-cover md:mt-20 mx-auto min-[450px]:mr-0 hover:border-red-600 hover:border-2"
+                    />
+                    <img
+                      // src="https://pagedone.io/asset/uploads/1696238665.png"
+                      alt="Team tailwind section"
+                      class="w-52 h-60 rounded-2xl object-cover mx-auto min-[450px]:ml-0 md:mx-auto hover:border-red-600 hover:border-2"
+                    />
+                    <img
+                      // src="https://pagedone.io/asset/uploads/1696238684.png"
+                      alt="Team tailwind section"
+                      class="w-52 h-60 rounded-2xl object-cover md:mt-20 mx-auto min-[450px]:mr-0 md:ml-0 hover:border-red-600 hover:border-2"
+                    />
+                    <img
+                      // src="https://pagedone.io/asset/uploads/1696238702.png"
+                      alt="Team tailwind section"
+                      class="w-52 h-60 rounded-2xl object-cover mx-auto min-[450px]:ml-0 md:mr-0 md:ml-auto hover:border-red-600 hover:border-2"
+                    />
+                    <img
+                      // src="https://pagedone.io/asset/uploads/1696238720.png"
+                      alt="Team tailwind section"
+                      class="w-52 h-60 rounded-2xl object-cover md:-mt-20 mx-auto min-[450px]:mr-0 md:mx-auto hover:border-red-600 hover:border-2"
+                    />
+                    <img
+                      // src="https://pagedone.io/asset/uploads/1696238737.png"
+                      alt="Team tailwind section"
+                      class="w-52 h-60 rounded-2xl object-cover mx-auto min-[450px]:ml-0 md:mr-0 hover:border-red-600 hover:border-2"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        {/* Dept. Heads */}
+        <div className="w-full h-full">
+          <section class="py-24 ">
+            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+              <div class="mb-40">
+                <h2 class="font-manrope text-3xl text-center font-bold text-white mb-6">
+                  DEPARTMENT HEADS
+                </h2>
+              </div>
+              <div class="flex flex-wrap justify-center gap-y-14 max-w-3xl mx-auto lg:max-w-full ">
+                <div class="group block text-center lg:w-1/5 sm:w-1/3 min-[450px]:w-1/2 w-full">
+                  <div class="relative mb-5">
+                    <img
+                      // src="https://pagedone.io/asset/uploads/1698649968.png"
+                      alt="Marvin image"
+                      class="w-56 h-56 rounded-2xl object-cover mx-auto ransition-all duration-500 border-2 border-solid border-transparent group-hover:border-red-600"
+                    />
+                  </div>
+                  <h4 class="text-xl text-white font-semibold text-center mb-2 transition-all duration-500 ">
+                    1
+                  </h4>
+                  <span class="text-white text-center block transition-all duration-500 ">
+                    Techniacal Head
+                  </span>
+                </div>
+                <div class="group block text-center lg:w-1/5 sm:w-1/3 min-[450px]:w-1/2 w-full">
+                  <div class="relative mb-5">
+                    <img
+                      // src="https://pagedone.io/asset/uploads/1698650000.png"
+                      alt="Kathryn image"
+                      class="w-56 h-56 rounded-2xl object-cover mx-auto ransition-all duration-500 border-2 border-solid border-transparent group-hover:border-red-600"
+                    />
+                  </div>
+                  <h4 class="text-xl text-white font-semibold text-center mb-2 transition-all duration-500 ">
+                    2
+                  </h4>
+                  <span class="text-white text-center block transition-all duration-500 ">
+                    EM Head
+                  </span>
+                </div>
+                <div class="group block text-center lg:w-1/5 sm:w-1/3 min-[450px]:w-1/2 w-full">
+                  <div class="relative mb-5">
+                    <img
+                      // src="https://pagedone.io/asset/uploads/1698659360.png"
+                      alt="Jerome image"
+                      class="w-56 h-56 rounded-2xl object-cover mx-auto ransition-all duration-500 border-2 border-solid border-transparent group-hover:border-red-600"
+                    />
+                  </div>
+                  <h4 class="text-xl text-white font-semibold text-center mb-2 transition-all duration-500 ">
+                    3
+                  </h4>
+                  <span class="text-white text-center block transition-all duration-500 ">
+                    Design Head
+                  </span>
+                </div>
+                <div class="group block text-center lg:w-1/5 sm:w-1/3 min-[450px]:w-1/2 w-full">
+                  <div class="relative mb-5">
+                    <img
+                      // src="https://pagedone.io/asset/uploads/1698650109.png"
+                      alt="Wade image"
+                      class="w-56 h-56 rounded-2xl object-cover mx-auto ransition-all duration-500 border-2 border-solid border-transparent group-hover:border-red-600"
+                    />
+                  </div>
+                  <h4 class="text-xl text-white font-semibold text-center mb-2 transition-all duration-500 ">
+                    4
+                  </h4>
+                  <span class="text-white text-center block transition-all duration-500 ">
+                    Spon Head
+                  </span>
+                </div>
+                <div class="group block text-center lg:w-1/5 sm:w-1/3 min-[450px]:w-1/2 w-full">
+                  <div class="relative mb-5">
+                    <img
+                      // src="https://pagedone.io/asset/uploads/1698650146.png"
+                      alt="Leslie image"
+                      class="w-56 h-56 rounded-2xl object-cover mx-auto ransition-all duration-500 border-2 border-solid border-transparent group-hover:border-red-600"
+                    />
+                  </div>
+                  <h4 class="text-xl text-white font-semibold text-center mb-2 transition-all duration-500 ">
+                    5
+                  </h4>
+                  <span class="text-white text-center block transition-all duration-500 ">
+                    Spon Head
+                  </span>
+                </div>
+                <div class="group block text-center lg:w-1/5 sm:w-1/3 min-[450px]:w-1/2 w-full">
+                  <div class="relative mb-5">
+                    <img
+                      // src="https://pagedone.io/asset/uploads/1698650184.png"
+                      alt="Guy image"
+                      class="w-56 h-56 rounded-2xl object-cover mx-auto ransition-all duration-500 border-2 border-solid border-transparent group-hover:border-red-600"
+                    />
+                  </div>
+                  <h4 class="text-xl text-white font-semibold text-center mb-2 transition-all duration-500 ">
+                    6
+                  </h4>
+                  <span class="text-white text-center block transition-all duration-500 ">
+                    Publicity Head
+                  </span>
+                </div>
+                <div class="group block text-center lg:w-1/5 sm:w-1/3 min-[450px]:w-1/2 w-full">
+                  <div class="relative mb-5">
+                    <img
+                      // src="https://pagedone.io/asset/uploads/1698650213.png"
+                      alt="Ronald image"
+                      class="w-56 h-56 rounded-2xl object-cover mx-auto ransition-all duration-500 border-2 border-solid border-transparent group-hover:border-red-600"
+                    />
+                  </div>
+                  <h4 class="text-xl text-white font-semibold text-center mb-2 transition-all duration-500 ">
+                    7
+                  </h4>
+                  <span class="text-white text-center block transition-all duration-500 ">
+                    Head
+                  </span>
+                </div>
+                <div class="group block text-center lg:w-1/5 sm:w-1/3 min-[450px]:w-1/2 w-full">
+                  <div class="relative mb-5">
+                    <img
+                      // src="https://pagedone.io/asset/uploads/1698650242.png"
+                      alt="Devon image"
+                      class="w-56 h-56 rounded-2xl object-cover mx-auto ransition-all duration-500 border-2 border-solid border-transparent group-hover:border-red-600"
+                    />
+                  </div>
+                  <h4 class="text-xl text-white font-semibold text-center mb-2 transition-all duration-500 ">
+                    8
+                  </h4>
+                  <span class="text-white text-center block transition-all duration-500 ">
+                    Head
+                  </span>
+                </div>
+                <div class="group block text-center lg:w-1/5 sm:w-1/3 min-[450px]:w-1/2 w-full">
+                  <div class="relative mb-5">
+                    <img
+                      // src="https://pagedone.io/asset/uploads/1698650271.png"
+                      alt="Dianne image"
+                      class="w-56 h-56 rounded-2xl object-cover mx-auto ransition-all duration-500 border-2 border-solid border-transparent group-hover:border-red-600"
+                    />
+                  </div>
+                  <h4 class="text-xl text-white font-semibold text-center mb-2 transition-all duration-500 ">
+                    9
+                  </h4>
+                  <span class="text-white text-center block transition-all duration-500 ">
+                    Head
+                  </span>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
       </div>
     </>
   );
@@ -774,5 +964,3 @@ const scrollToElement = (elementId, duration) => {
 
   requestAnimationFrame(animateScroll);
 };
-
-export default App;
