@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./index.css";
+import "./fonts.css";
 import navLogo from "./assets/navLogo.svg";
 import homeLogo from "./assets/homeLogo.svg";
 import heroImg1 from "./assets/heroImg1.svg";
@@ -11,11 +12,26 @@ import insta_logo from "./assets/insta_logo.png";
 import linkedIn_logo from "./assets/linkedIn_logo.png";
 import march from "./assets/march.png";
 import date from "./assets/2025.png";
+import ted from "./assets/ted_stroke.png";
+import tedx from "./assets/tedx_stroke.png";
+import tedxbvcoe from "./assets/tedxbvcoe_stroke.png";
 import Ticket1 from "./assets/Ticket_1.png";
 import Ticket2 from "./assets/Ticket_2.png";
 import Ticket3 from "./assets/Ticket_3.png";
 import Ticket4 from "./assets/Ticket_4.png";
 import Ticket5 from "./assets/Ticket_5.png";
+import Paridhi from "./assets/Team/paridhi_harit.jpg";
+import Ridhi from "./assets/Team/Ridhi_Gupta.jpeg";
+import Aashima from "./assets/Team/Aashima_Bathla.jpeg";
+import Abhinav from "./assets/Team/Abhinav_Kumar_Singh.jpg";
+import Aditya_Shrivastav from "./assets/Team/Aditya_Shrivastav.jpg";
+import Aditya_Singh from "./assets/Team/Aditya_Singh.jpg";
+import Bhrigu from "./assets/Team/Bhrigu_Tayal.png";
+import Devansh from "./assets/Team/Devansh_Biswas.jpg";
+import Harshvardhan from "./assets/Team/Harshvardhan_Singh_Rajput.jpg";
+import Maitri from "./assets/Team/Maitri.jpg";
+import Priyal from "./assets/Team/Priyal_Agarwal.jpg";
+import Uday from "./assets/Team/Uday_singh_pundeer.jpg";
 import polo_front from "./assets/polo_front.png";
 import polo_back from "./assets/polo_back.png";
 import round_neck_front from "./assets/round_neck_front.png";
@@ -76,7 +92,10 @@ const Navbar = () => {
 
   return (
     <>
-      <nav id="nav" className="navbar h-full w-full bg-black sm:flex hidden justify-between items-center overflow-hidden flex-row sm:px-6 sm:py-[0.94rem]">
+      <nav
+        id="nav"
+        className="navbar h-full w-full bg-black sm:flex hidden justify-between items-center overflow-hidden flex-row sm:px-6 sm:py-[0.94rem]"
+      >
         <div className="flex text-white text-xl gap-5">
           <Link
             href="#speakers"
@@ -261,33 +280,39 @@ const InfoButtons = () => {
   const items = [
     {
       title: "TED",
-      content:
-        "TED (Technology, Entertainment, Design) is a global platform that hosts conferences featuring influential speakers from various fields who share their innovative ideas and experiences. Founded in 1984, TED has become synonymous with Ideas Worth Spreading. The main TED conference is held annually in Vancouver, Canada, and its talks cover a wide range of topics, including science.",
+      content1:
+        "TED (Technology, Entertainment, Design) is a global platform that hosts conferences featuring influential speakers from various fields who share their innovative ideas and experiences. ",
+      content2:
+        "Founded in 1984, TED has become synonymous with Ideas Worth Spreading. The main TED conference is held annually in Vancouver, Canada, and its talks cover a wide range of topics, including science. ",
     },
     {
       title: "TEDx",
-      content:
-        "TEDx events are independently organized TED-like conferences that can take place anywhere in the world. These events aim to bring the spirit of TED to local communities and provide a platform for individuals to share their ideas and perspectives. TEDx talks cover a broad spectrum of subjects, often reflecting the unique challenges and innovations of a particular region.",
+      content1:
+        "TEDx events are independently organized TED-like conferences that can take place anywhere in the world. These events aim to bring the spirit of TED to local communities and provide a platform for individuals to share their unique ideas. ",
+      content2:
+        "TEDx talks cover a broad spectrum of subjects, often reflecting the unique challenges and innovations of a particular region. ",
     },
     {
       title: "TEDxBVCOE",
-      content:
-        "TEDxBVCOE is a specific instance of a TEDx event affiliated with Bharati Vidyapeeth College of Engineering (BVCOE) in Delhi, India. Organized independently by a dedicated local team of volunteers, TEDxBVCOE serves as a platform for students, educators, and professionals to share their insights and ideas with the community. The BVCOE in TEDxBVCOE represents Bharati Vidyapeeth College of Engineering, the hosting institution.",
+      content1:
+        "TEDxBVCOE is a specific instance of a TEDx event affiliated with Bharati Vidyapeeth College of Engineering (BVCOE) in Delhi, India. Organized independently by a dedicated local team of volunteers, TEDxBVCOE serves as a platform for students, educators, and professionals to share their insights and ideas with the community. ",
+      content2:
+        "The BVCOE in TEDxBVCOE represents Bharati Vidyapeeth College of Engineering, the hosting institution. ",
     },
   ];
 
   return (
-    <div className="flex relative w-full flex-col items-center justify-center sm:h-[600px] h-[700px] bg-black gap-10">
-      <h1 className="text-white text-2xl font-bold top-0 uppercase">
+    <div className="flex relative w-full flex-col items-center justify-center sm:h-[600px] h-[900px] bg-black gap-0">
+      <h1 className="info-heading text-white text-[40pt] font-bold top-0 uppercase">
         WHAT IS TED?
       </h1>
 
       <div className="flex flex-col items-center sm:w-[600px] w-full gap-4 bg-black text-white p-5">
-        <div className="flex flex-wrap justify-center mb-4 gap-5">
+        <div className="flex flex-wrap justify-center mb-4 gap-5 w-full">
           {items.map((item, index) => (
             <button
               key={index}
-              className="bg-none text-white h-14 sm:px-8 px-4 py-2 items-center justify-center border-2 border-white rounded-xl font-bold cursor-pointer"
+              className="bg-none text-white h-14 sm:px-8 px-2 py-2 items-center justify-center text-2xl font-[Helvetica] font-bold cursor-pointer"
               onClick={() => setOpenIndex(openIndex === index ? null : index)}
             >
               {item.title}
@@ -297,13 +322,20 @@ const InfoButtons = () => {
         {items.map((item, index) => (
           <div
             key={index}
-            className={`transition-all duration-300 ${
+            className={`flex flex-col gap-10 transition-all duration-300 lg:w-[65rem] ${
               openIndex === index ? "max-h-40" : "max-h-0 overflow-hidden"
             }`}
           >
-            <p className="text-white font-medium text-xl sm:text-justify text-justify">
-              {item.content}
+            <p className="text-white font-medium text-xl text-left font-[Helvetica]">
+              {item.content1}
             </p>
+            <div className="flex justify-end w-full">
+              <div className="flex justify-end lg:w-[60rem]">
+                <p className="text-white font-medium text-xl lg:text-left text-right font-[Helvetica]">
+                  {item.content2}
+                </p>
+              </div>
+            </div>
           </div>
         ))}
       </div>
@@ -462,7 +494,10 @@ const Partners = () => {
 const Team = () => {
   return (
     <>
-      <div id="team" className="flex flex-col gap-20 h-full w-full bg-black p-10 ">
+      <div
+        id="team"
+        className="flex flex-col gap-20 h-full w-full bg-black p-10 "
+      >
         <div className="w-full">
           <h1 className="text-3xl font-bold text-white text-center">
             OUR TEAM
@@ -470,27 +505,53 @@ const Team = () => {
         </div>
 
         {/* Organizers */}
-        <div className="h-1/2 w-full flex flex-col sm:flex-row p-10 gap-10 items-center justify-center pt-14">
+        <div className="h-full w-full flex flex-col sm:flex-row p-10 gap-10 items-center justify-center pt-14">
           <div className="sm:w-2/5  text-center">
-            <h1 className="text-white text-3xl font-bold sm:mb-0 mb-10">OUR ORGANIZERS</h1>
+            <h1 className="text-white text-3xl font-bold sm:mb-0 mb-10">
+              OUR ORGANIZERS
+            </h1>
           </div>
 
-          <div className="lg:w-3/5 w-full flex flex-col sm:flex-row gap-30 items-center justify-center">
-            <img
-              // src={Ticket1}
-              alt=""
-              className="w-56 h-70 rounded-2xl object-cover md:mt-20 min-[450px]:mr-0 hover:border-red-600 hover:border-2"
-            />
-            <img
-              // src={Ticket2}
-              alt=""
-              className="w-56 h-70 rounded-2xl object-cover md:mt-20 min-[450px]:mr-0 hover:border-red-600 hover:border-2"
-            />
+          <div className="lg:w-3/5 w-full h-full flex flex-col sm:flex-row gap-30 items-center justify-center">
+            <div class="group block text-center  lg:w-3/6 sm:w-1/3 min-[450px]:w-1/2 w-full">
+              <div class="relative mb-5 h-full w-full">
+                <a href="https://www.linkedin.com/in/reachparidhi">
+                  <img
+                    src={Paridhi}
+                    alt="Marvin image"
+                    class="w-70 h-70 rounded-2xl object-cover mx-auto ransition-all duration-500 border-2 border-solid border-transparent group-hover:border-red-600"
+                  />
+                </a>
+              </div>
+              <h4 class="text-xl text-white font-semibold text-center mb-2 transition-all duration-500 ">
+                Paridhi Harit
+              </h4>
+              <span class="text-white text-center block transition-all duration-500 ">
+                Organizer
+              </span>
+            </div>
+            <div class="group block text-center lg:w-3/6 sm:w-1/3 min-[450px]:w-1/2 w-full">
+              <div class="relative mb-5 h-full w-full">
+                <a href="http://www.linkedin.com/in/ridhi-gupta07">
+                  <img
+                    src={Ridhi}
+                    alt="Marvin image"
+                    class="w-70 h-70 rounded-2xl object-cover mx-auto ransition-all duration-500 border-2 border-solid border-transparent group-hover:border-red-600"
+                  />
+                </a>
+              </div>
+              <h4 class="text-xl text-white font-semibold text-center mb-2 transition-all duration-500 ">
+                Ridhi Gupta
+              </h4>
+              <span class="text-white text-center block transition-all duration-500 ">
+                Co-Organizer
+              </span>
+            </div>
           </div>
         </div>
 
         {/* Core Team */}
-        <div className="w-full h-full">
+        {/* <div className="w-full h-full">
           <section class="bg-black">
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
               <div class="flex justify-between items-center flex-col lg:flex-row md:mt-20">
@@ -498,12 +559,6 @@ const Team = () => {
                   <h2 class="w-full font-manrope text-3xl text-white text-center font-bold leading-[4rem] mb-7 lg:text-left lg:pl-14">
                     OUR CORE TEAM
                   </h2>
-                  {/* <p class="text-lg text-gray-500 mb-16 text-center lg:text-left">
-                    These people work on making our product best.
-                  </p> */}
-                  {/* <button class="cursor-pointer py-3 px-8 w-60 bg-indigo-600 text-white text-base font-semibold transition-all duration-500 block text-center rounded-full hover:bg-indigo-700 mx-auto lg:mx-0">
-                    Join our team
-                  </button> */}
                 </div>
                 <div class="w-full lg:w-1/2 lg:mt-0 md:mt-40 mt-16 max-lg:max-w-2xl">
                   <div class="grid grid-cols-1 min-[450px]:grid-cols-2 md:grid-cols-3 gap-8">
@@ -542,151 +597,186 @@ const Team = () => {
               </div>
             </div>
           </section>
-        </div>
+        </div> */}
 
         {/* Dept. Heads */}
         <div className="w-full h-full">
           <section class="py-24 ">
-            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-              <div class="mb-40">
+            <div class="mx-auto max-w-9xl px-4 sm:px-6 lg:px-8">
+              <div class="mb-20">
                 <h2 class="font-manrope text-3xl text-center font-bold text-white mb-6">
                   DEPARTMENT HEADS
                 </h2>
               </div>
-              <div class="flex flex-wrap justify-center gap-y-14 max-w-3xl mx-auto lg:max-w-full ">
+              <div class="flex flex-wrap justify-center gap-y-24  max-w-3xl mx-auto lg:max-w-full ">
                 <div class="group block text-center lg:w-1/5 sm:w-1/3 min-[450px]:w-1/2 w-full">
                   <div class="relative mb-5">
-                    <img
-                      // src="https://pagedone.io/asset/uploads/1698649968.png"
-                      alt="Marvin image"
-                      class="w-56 h-56 rounded-2xl object-cover mx-auto ransition-all duration-500 border-2 border-solid border-transparent group-hover:border-red-600"
-                    />
+                    <a href="https://www.linkedin.com/in/uday-pundeer-460580267?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
+                      <img
+                        src={Uday}
+                        alt="Marvin image"
+                        class="w-56 h-56 rounded-2xl object-cover mx-auto ransition-all duration-500 border-2 border-solid border-transparent group-hover:border-red-600"
+                      />
+                    </a>
                   </div>
                   <h4 class="text-xl text-white font-semibold text-center mb-2 transition-all duration-500 ">
-                    1
+                    Uday Singh Pundeer
                   </h4>
                   <span class="text-white text-center block transition-all duration-500 ">
-                    Techniacal Head
+                    Head of Productions
                   </span>
                 </div>
                 <div class="group block text-center lg:w-1/5 sm:w-1/3 min-[450px]:w-1/2 w-full">
                   <div class="relative mb-5">
-                    <img
-                      // src="https://pagedone.io/asset/uploads/1698650000.png"
-                      alt="Kathryn image"
-                      class="w-56 h-56 rounded-2xl object-cover mx-auto ransition-all duration-500 border-2 border-solid border-transparent group-hover:border-red-600"
-                    />
+                    <a href="https://www.linkedin.com/in/abhinavkumarsingh1405">
+                      <img
+                        src={Abhinav}
+                        alt="Kathryn image"
+                        class="w-56 h-56 rounded-2xl object-cover mx-auto ransition-all duration-500 border-2 border-solid border-transparent group-hover:border-red-600"
+                      />
+                    </a>
                   </div>
                   <h4 class="text-xl text-white font-semibold text-center mb-2 transition-all duration-500 ">
-                    2
+                    Abhinav Singh
                   </h4>
                   <span class="text-white text-center block transition-all duration-500 ">
-                    EM Head
+                    Head of Productions
                   </span>
                 </div>
                 <div class="group block text-center lg:w-1/5 sm:w-1/3 min-[450px]:w-1/2 w-full">
                   <div class="relative mb-5">
-                    <img
-                      // src="https://pagedone.io/asset/uploads/1698659360.png"
-                      alt="Jerome image"
-                      class="w-56 h-56 rounded-2xl object-cover mx-auto ransition-all duration-500 border-2 border-solid border-transparent group-hover:border-red-600"
-                    />
+                    <a href="https://www.linkedin.com/in/bhrigu-tayal-0aa469212/">
+                      <img
+                        src={Bhrigu}
+                        alt="Jerome image"
+                        class="w-56 h-56 rounded-2xl object-cover mx-auto ransition-all duration-500 border-2 border-solid border-transparent group-hover:border-red-600"
+                      />
+                    </a>
                   </div>
                   <h4 class="text-xl text-white font-semibold text-center mb-2 transition-all duration-500 ">
-                    3
+                    Bhrigu Tayal
                   </h4>
                   <span class="text-white text-center block transition-all duration-500 ">
-                    Design Head
+                    Head of Operations
                   </span>
                 </div>
                 <div class="group block text-center lg:w-1/5 sm:w-1/3 min-[450px]:w-1/2 w-full">
                   <div class="relative mb-5">
-                    <img
-                      // src="https://pagedone.io/asset/uploads/1698650109.png"
-                      alt="Wade image"
-                      class="w-56 h-56 rounded-2xl object-cover mx-auto ransition-all duration-500 border-2 border-solid border-transparent group-hover:border-red-600"
-                    />
+                    <a href="https://www.linkedin.com/in/reach-priyalagarwal">
+                      <img
+                        src={Priyal}
+                        alt="Wade image"
+                        class="w-56 h-56 rounded-2xl object-cover mx-auto ransition-all duration-500 border-2 border-solid border-transparent group-hover:border-red-600"
+                      />
+                    </a>
                   </div>
                   <h4 class="text-xl text-white font-semibold text-center mb-2 transition-all duration-500 ">
-                    4
+                    Priyal Agarwal
                   </h4>
                   <span class="text-white text-center block transition-all duration-500 ">
-                    Spon Head
+                    Head of Productions
                   </span>
                 </div>
                 <div class="group block text-center lg:w-1/5 sm:w-1/3 min-[450px]:w-1/2 w-full">
                   <div class="relative mb-5">
-                    <img
-                      // src="https://pagedone.io/asset/uploads/1698650146.png"
-                      alt="Leslie image"
-                      class="w-56 h-56 rounded-2xl object-cover mx-auto ransition-all duration-500 border-2 border-solid border-transparent group-hover:border-red-600"
-                    />
+                    <a href="http://www.linkedin.com/in/harshvardhan-rajput-504b941b5">
+                      <img
+                        src={Harshvardhan}
+                        alt="Leslie image"
+                        class="w-56 h-56 rounded-2xl object-cover mx-auto ransition-all duration-500 border-2 border-solid border-transparent group-hover:border-red-600"
+                      />
+                    </a>
                   </div>
                   <h4 class="text-xl text-white font-semibold text-center mb-2 transition-all duration-500 ">
-                    5
+                    Harshvardhan Singh Rajput
                   </h4>
                   <span class="text-white text-center block transition-all duration-500 ">
-                    Spon Head
+                    Head of Design and Creative
                   </span>
                 </div>
                 <div class="group block text-center lg:w-1/5 sm:w-1/3 min-[450px]:w-1/2 w-full">
                   <div class="relative mb-5">
-                    <img
-                      // src="https://pagedone.io/asset/uploads/1698650184.png"
-                      alt="Guy image"
-                      class="w-56 h-56 rounded-2xl object-cover mx-auto ransition-all duration-500 border-2 border-solid border-transparent group-hover:border-red-600"
-                    />
+                    <a href="https://www.linkedin.com/in/maitri-65b510257/">
+                      <img
+                        src={Maitri}
+                        alt="Guy image"
+                        class="w-56 h-56 rounded-2xl object-cover mx-auto ransition-all duration-500 border-2 border-solid border-transparent group-hover:border-red-600"
+                      />
+                    </a>
                   </div>
                   <h4 class="text-xl text-white font-semibold text-center mb-2 transition-all duration-500 ">
-                    6
+                    Maitri
                   </h4>
                   <span class="text-white text-center block transition-all duration-500 ">
-                    Publicity Head
+                    Head of Content and Documentation
                   </span>
                 </div>
                 <div class="group block text-center lg:w-1/5 sm:w-1/3 min-[450px]:w-1/2 w-full">
                   <div class="relative mb-5">
-                    <img
-                      // src="https://pagedone.io/asset/uploads/1698650213.png"
-                      alt="Ronald image"
-                      class="w-56 h-56 rounded-2xl object-cover mx-auto ransition-all duration-500 border-2 border-solid border-transparent group-hover:border-red-600"
-                    />
+                    <a href="https://www.linkedin.com/in/devansh-biswas-606666214?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
+                      <img
+                        src={Devansh}
+                        alt="Ronald image"
+                        class="w-56 h-56 rounded-2xl object-cover mx-auto ransition-all duration-500 border-2 border-solid border-transparent group-hover:border-red-600"
+                      />
+                    </a>
                   </div>
                   <h4 class="text-xl text-white font-semibold text-center mb-2 transition-all duration-500 ">
-                    7
+                    Devansh Biswas
                   </h4>
                   <span class="text-white text-center block transition-all duration-500 ">
-                    Head
+                    Head of Publicity
                   </span>
                 </div>
                 <div class="group block text-center lg:w-1/5 sm:w-1/3 min-[450px]:w-1/2 w-full">
                   <div class="relative mb-5">
-                    <img
-                      // src="https://pagedone.io/asset/uploads/1698650242.png"
-                      alt="Devon image"
-                      class="w-56 h-56 rounded-2xl object-cover mx-auto ransition-all duration-500 border-2 border-solid border-transparent group-hover:border-red-600"
-                    />
+                    <a href="https://in.linkedin.com/in/dikkey-kumar-singh-36a6b12ab">
+                      <img
+                        src={Aditya_Singh}
+                        alt="Devon image"
+                        class="w-56 h-56 rounded-2xl object-cover mx-auto ransition-all duration-500 border-2 border-solid border-transparent group-hover:border-red-600"
+                      />
+                    </a>
                   </div>
                   <h4 class="text-xl text-white font-semibold text-center mb-2 transition-all duration-500 ">
-                    8
+                    Aditya Singh
                   </h4>
                   <span class="text-white text-center block transition-all duration-500 ">
-                    Head
+                    Head of Publicity
                   </span>
                 </div>
                 <div class="group block text-center lg:w-1/5 sm:w-1/3 min-[450px]:w-1/2 w-full">
                   <div class="relative mb-5">
-                    <img
-                      // src="https://pagedone.io/asset/uploads/1698650271.png"
-                      alt="Dianne image"
-                      class="w-56 h-56 rounded-2xl object-cover mx-auto ransition-all duration-500 border-2 border-solid border-transparent group-hover:border-red-600"
-                    />
+                    <a href="https://www.linkedin.com/in/reachshrivastav">
+                      <img
+                        src={Aditya_Shrivastav}
+                        alt="Dianne image"
+                        class="w-56 h-56 rounded-2xl object-cover mx-auto ransition-all duration-500 border-2 border-solid border-transparent group-hover:border-red-600"
+                      />
+                    </a>
                   </div>
                   <h4 class="text-xl text-white font-semibold text-center mb-2 transition-all duration-500 ">
-                    9
+                    Aditya Shrivastav
                   </h4>
                   <span class="text-white text-center block transition-all duration-500 ">
-                    Head
+                    Head of Technical
+                  </span>
+                </div>
+                <div class="group block text-center lg:w-1/5 sm:w-1/3 min-[450px]:w-1/2 w-full">
+                  <div class="relative mb-5">
+                    <a href="https://www.linkedin.com/in/aashima-bathla?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app">
+                      <img
+                        src={Aashima}
+                        alt="Dianne image"
+                        class="w-56 h-56 rounded-2xl object-cover mx-auto ransition-all duration-500 border-2 border-solid border-transparent group-hover:border-red-600"
+                      />
+                    </a>
+                  </div>
+                  <h4 class="text-xl text-white font-semibold text-center mb-2 transition-all duration-500 ">
+                    Aashima Bathla
+                  </h4>
+                  <span class="text-white text-center block transition-all duration-500 ">
+                    Head of Social Media
                   </span>
                 </div>
               </div>

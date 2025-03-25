@@ -1,0 +1,14 @@
+@font-face {
+  font-family: 'ModernFBComp';
+  src: url('    /fonts/ModernFBComp-RegularItalic.otf') format('otf');
+}
+
+@font-face {
+    font-family: 'Helvetica';
+    src: url('/fonts/Helvetica.ttf') format('ttf');
+  }
+  
+  @font-face {
+    font-family: 'Helvetica-Bold';
+    src: url('/fonts/Helvetica-Bold.ttf') format('ttf');
+  }
