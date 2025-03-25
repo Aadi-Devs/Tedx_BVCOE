@@ -12,15 +12,16 @@ import insta_logo from "./assets/insta_logo.png";
 import linkedIn_logo from "./assets/linkedIn_logo.png";
 import march from "./assets/march.png";
 import date from "./assets/2025.png";
-import ted from "./assets/ted_stroke.png";
-import tedx from "./assets/tedx_stroke.png";
-import tedxbvcoe from "./assets/tedxbvcoe_stroke.png";
+// import ted from "./assets/ted_stroke.png";
+// import tedx from "./assets/tedx_stroke.png";
+// import tedxbvcoe from "./assets/tedxbvcoe_stroke.png";
 import Ticket1 from "./assets/Ticket_1.png";
 import Ticket2 from "./assets/Ticket_2.png";
 import Ticket3 from "./assets/Ticket_3.png";
 import Ticket4 from "./assets/Ticket_4.png";
 import Ticket5 from "./assets/Ticket_5.png";
 import Paridhi from "./assets/Team/paridhi_harit.jpg";
+// import Paridhi1 from "./assets/Team/paridhi_harit - Copy. jpg";
 import Ridhi from "./assets/Team/Ridhi_Gupta.jpeg";
 import Aashima from "./assets/Team/Aashima_Bathla.jpeg";
 import Abhinav from "./assets/Team/Abhinav_Kumar_Singh.jpg";
@@ -127,7 +128,7 @@ const Navbar = () => {
           </Link>
         </div>
         <div className="navbar-brand">
-          <img src={navLogo} alt="" className="w-[14rem]" />
+          <img src={navLogo} alt="" className="w-[14rem] lg:mr-16" />
         </div>
         <div className="flex text-white text-xl gap-5">
           <Link
@@ -1002,7 +1003,7 @@ const Footer = () => {
               </a>
               <div>. All Rights Reserved.</div>
             </span>
-            <span className="flex gap-1.5 text-md text-grayc-500 sm:text-center dark:text-gray-400">
+            <span className="flex gap-1.5 text-md text-grayc-500 sm:text-center dark:text-gray-400 mr-18">
               <div>Developed by</div>
               <div>
                 <a
