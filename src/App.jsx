@@ -5,12 +5,12 @@ import navLogo from "./assets/navLogo.svg";
 import homeLogo from "./assets/homeLogo.svg";
 import heroImg1 from "./assets/heroImg1.svg";
 import navMobileMenu from "./assets/navMobileMenu.svg";
-import year from "./assets/2025.svg";
+// import year from "./assets/2025.png";
 import Passes_btn_heart from "./assets/Passes_btn_heart.png";
 import Arrow from "./assets/Arrow.png";
 import insta_logo from "./assets/insta_logo.png";
 import linkedIn_logo from "./assets/linkedIn_logo.png";
-import march from "./assets/march.png";
+import april from "./assets/april.png";
 import date from "./assets/2025.png";
 import Ticket1 from "./assets/Ticket_1.png";
 import Ticket2 from "./assets/Ticket_2.png";
@@ -235,11 +235,11 @@ const Hero = () => {
           /> */}
           <div className="dates flex flex-col h-full justify-center sm:items-end items-start sm:pt-26 z-20">
             <img
-              src={march}
+              src={april}
               alt=""
               height=""
               width=""
-              className="sm:h-full sm:w-[100%] h-[100px]  w-[300px]"
+              className="sm:h-full sm:w-[39rem] h-[100px]  w-[300px]"
             />
             <img
               src={date}
@@ -258,7 +258,7 @@ const Hero = () => {
 const PassesButton = () => {
   return (
     <div className="sm:h-[480px] h-[250px] w-full bg-black flex flex-col items-center">
-      <img src={year} alt="" width="1682" height="250" className="" />
+      {/* <img src={year} alt="" width="" height="" className="h-58 w-full opacity-15" /> */}
       <div className="flex h-full items-center z-[100] pt-25">
         <Link onClick={() => scrollToElement("tickets", 1000)}>
           <button className="bg-gray-400 flex flex-row items-center justify-center gap-3 transition-all text-center text-xl text-black font-bold py-2 px-4 rounded-xl h-16 cursor-pointer ">
