@@ -56,7 +56,7 @@ const Hero = () => {
         </div>
         <div className="Center-Text absolute flex sm:top-80 top-40 w-full justify-center items-center">
           <h1 className="Center_Text-h1 sm:text-8xl text-red-600 z-[20] font-semibold text-center">
-            Coming soon - March 2025
+            Coming soon - 9th April 2025
           </h1>
           {/* <div className="z-[10]">
             <BubbleText />

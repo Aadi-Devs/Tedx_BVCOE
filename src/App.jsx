@@ -11,7 +11,8 @@ import Arrow from "./assets/Arrow.png";
 import insta_logo from "./assets/insta_logo.png";
 import linkedIn_logo from "./assets/linkedIn_logo.png";
 import april from "./assets/april.png";
-import date from "./assets/2025.png";
+import year from "./assets/2025.png";
+import date from "./assets/9th.png";
 import Ticket1 from "./assets/Ticket_1.png";
 import Ticket2 from "./assets/Ticket_2.png";
 import Ticket3 from "./assets/Ticket_3.png";
@@ -234,15 +235,18 @@ const Hero = () => {
             className="sm:invisible visible w-[300px] z-20"
           /> */}
           <div className="dates flex flex-col h-full justify-center sm:items-end items-start sm:pt-26 z-20">
+            <div className="flex h-full sm:gap-6 gap-7 sm:pl-0 pl-1">
+            <img src={date} alt="" className="sm:h-[6rem] sm:w-[15rem] h-[40px]  w-[100px]"/>
             <img
               src={april}
               alt=""
               height=""
               width=""
-              className="sm:h-full sm:w-[39rem] h-[100px]  w-[300px]"
+              className="sm:h-[5.8rem] sm:w-[25rem] h-[38px]  w-[166px]"
             />
+            </div>
             <img
-              src={date}
+              src={year}
               alt=""
               height=""
               width=""
@@ -257,7 +261,7 @@ const Hero = () => {
 
 const PassesButton = () => {
   return (
-    <div className="sm:h-[480px] h-[250px] w-full bg-black flex flex-col items-center">
+    <div className="sm:h-[400px] h-[200px] sm:pt-0 pt-36 w-full bg-black flex flex-col items-center">
       {/* <img src={year} alt="" width="" height="" className="h-58 w-full opacity-15" /> */}
       <div className="flex h-full items-center z-[100] pt-25">
         <Link onClick={() => scrollToElement("tickets", 1000)}>
@@ -301,7 +305,7 @@ const InfoButtons = () => {
   return (
     <div className="flex relative w-full flex-col items-center justify-center sm:h-[600px] h-[900px] bg-black gap-0">
       <h1 className="info-heading text-white text-[40pt] font-bold top-0 uppercase">
-        WHAT IS TED?
+        WHAT IS?
       </h1>
 
       <div className="flex flex-col items-center sm:w-[600px] w-full gap-4 bg-black text-white p-5">
@@ -346,7 +350,7 @@ const Speakers = () => {
       {/* min-h-[700px] */}
       <div
         id="speakers"
-        className="min-h-[300px] bg-black flex flex-col w-full px-10 pt-10 items-center gap-6"
+        className="min-h-[300px] bg-black flex flex-col w-full px-10 sm:pt-8 items-center gap-6"
       >
         <h1 className="text-white text-3xl font-bold">SPEAKERS</h1>
         <Link to="/continue">
@@ -446,9 +450,9 @@ const TicketBuying = () => {
       {/* min-h-screen */}
       <div
         id="tickets"
-        className="bg-black min-h-screen flex flex-col pt-10 w-full gap-8 items-center "
+        className="bg-black min-h-screen flex flex-col w-full gap-8 items-center "
       >
-        <h1 className="text-white text-3xl font-bold">PASSES</h1>
+        {/* <h1 className="text-white text-3xl font-bold">PASSES</h1> */}
         {/* <Link to="/continue">
           <button className="bg-[#FFF0D2] flex flex-row items-center justify-center gap-3 transition-all text-center text-xl text-black font-bold py-2 px-4 rounded-xl h-16 cursor-pointer">
             EVENT PASSES
@@ -474,7 +478,7 @@ const Partners = () => {
       {/* h-fit */}
       <div
         id="partners"
-        className="flex flex-col min-h-[300px] items-center pt-10 gap-10 bg-black "
+        className="flex flex-col min-h-[300px] items-center justify-center sm:pb-0 pb-12 gap-10 bg-black "
       >
         <h1 className="text-white font-bold text-3xl">OUR PARTNERS</h1>
         <Link to="/continue">
