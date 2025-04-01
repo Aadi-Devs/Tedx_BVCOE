@@ -322,7 +322,8 @@ const InfoButtons = () => {
   ];
 
   return (
-    <div className="flex relative w-full flex-col items-center justify-center sm:h-[600px] h-[900px] bg-black gap-0">
+    // sm:h-[600px]
+    <div className="flex relative w-full flex-col items-center justify-center lg:h-[1350px] sm:h-[1000px] bg-black gap-0 lg:mt-[0rem] mt-[10rem]">
       <h1 className="info-heading text-white text-[40pt] font-bold top-0 uppercase">
         WHAT IS?
       </h1>
@@ -359,6 +360,19 @@ const InfoButtons = () => {
           </div>
         ))}
       </div>
+
+      {/* yt Video */}
+
+      {/* width="560" height="315" */}
+      <iframe
+        src="https://www.youtube.com/embed/uNq8OJm8sA8?si=k_ujkofvwRfPYm41"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+        className="lg:w-[68rem] lg:h-[40rem] h-[15rem] w-[18rem] lg:mt-[14rem] mt-[22rem] rounded-3xl"
+      ></iframe>
     </div>
   );
 };
@@ -369,7 +383,7 @@ const Speakers = () => {
       {/* min-h-[700px] */}
       <div
         id="speakers"
-        className="min-h-[300px] bg-black flex flex-col w-full px-10 sm:pt-8 items-center gap-6"
+        className="min-h-[300px] bg-black flex flex-col w-full px-10 sm:pt-8 items-center gap-6 lg:mt-[6rem] sm:mt-[4rem]"
       >
         <h1 className="text-white text-3xl font-bold">SPEAKERS</h1>
         <Link to="/continue">
@@ -469,7 +483,7 @@ const TicketBuying = () => {
       {/* min-h-screen */}
       <div
         id="tickets"
-        className="bg-black min-h-screen flex flex-col w-full gap-8 items-center "
+        className="bg-black min-h-screen flex flex-col w-full gap-8 items-center"
       >
         {/* <h1 className="text-white text-3xl font-bold">PASSES</h1> */}
         {/* <Link to="/continue">
@@ -489,7 +503,7 @@ const TicketBuying = () => {
 
         <div className="flex flex-col h-full w-full gap-10 lg:pt-16 pt-20">
           <div>
-            <h1 className="text-white text-2xl text-center">
+            <h1 className="text-white font-bold text-2xl text-center">
               For any queries contact:
             </h1>
           </div>
