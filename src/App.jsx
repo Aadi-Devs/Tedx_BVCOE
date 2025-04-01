@@ -371,7 +371,7 @@ const InfoButtons = () => {
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         referrerpolicy="strict-origin-when-cross-origin"
         allowfullscreen
-        className="lg:w-[68rem] lg:h-[40rem] h-[15rem] w-[18rem] lg:mt-[14rem] mt-[22rem] rounded-3xl"
+        className="lg:w-[68rem] lg:h-[40rem] h-[15rem] w-[22rem] lg:mt-[14rem] mt-[22rem] rounded-3xl"
       ></iframe>
     </div>
   );
