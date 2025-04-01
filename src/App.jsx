@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./index.css";
 import "./fonts.css";
 import navLogo from "./assets/navLogo.svg";
-import homeLogo from "./assets/homeLogo.svg";
+// import homeLogo from "./assets/homeLogo.svg";
 import heroImg1 from "./assets/heroImg1.svg";
 import navMobileMenu from "./assets/navMobileMenu.svg";
 // import year from "./assets/2025.png";
@@ -36,6 +36,9 @@ import round_neck_front from "./assets/round_neck_front.png";
 import round_neck_back from "./assets/round_neck_back.png";
 import { Link } from "react-router-dom";
 import "aos/dist/aos.css";
+
+import pcImage from "./assets/pcImage.jpeg";
+import mobileImage from "./assets/mobileImage.jpeg";
 
 // import heroImgMobile from "./assets/heroImgMobile.svg";
 // import heroImg2 from "./assets/heroImg2.svg";
@@ -221,12 +224,24 @@ const Hero = () => {
   return (
     <>
       <div id="hero" className="">
-        <img
+        {/* <img
           src={homeLogo}
           alt=""
           className="static sm:h-full h-screen w-full object-cover object-center items-center justify-center"
-        />
-        <div className="top-20 z-10 bg-black opacity-80 absolute sm:h-[1172px] h-screen w-full"></div>
+        /> */}
+
+        <picture>
+          {/* Image for larger screens (PC) */}
+          <source srcSet={pcImage} media="(min-width: 640px)" />
+          {/* Image for smaller screens (Mobile) */}
+          <img
+            src={mobileImage}
+            alt=""
+            className="h-screen w-full object-cover object-center"
+          />
+        </picture>
+
+        <div className="top-20 z-10 bg-black lg:opacity-80 opacity-60 absolute sm:h-[1172px] h-screen w-full"></div>
         <div className="absolute flex sm:flex-row flex-col sm:top-80 top-40 w-full sm:justify-between sm:gap-0 gap-12 items-center pt-6 sm:px-13.5">
           <img src={heroImg1} alt="" className="sm:w-[500px] w-[300px] z-20" />
           {/* <img
@@ -474,11 +489,17 @@ const TicketBuying = () => {
 
         <div className="flex flex-col h-full w-full gap-10 lg:pt-16 pt-20">
           <div>
-            <h1 className="text-white text-2xl text-center">For any queries contact:</h1>
+            <h1 className="text-white text-2xl text-center">
+              For any queries contact:
+            </h1>
           </div>
           <div className="flex flex-col lg:flex-row gap-10 items-center justify-center">
-            <h1 className="text-white text-xl">Priyal Agarwal (+91 9136284851)</h1>
-            <h1 className="text-white text-xl">Bhrigu Tayal (+91 79824 75557)</h1>
+            <h1 className="text-white text-xl">
+              Priyal Agarwal (+91 9136284851)
+            </h1>
+            <h1 className="text-white text-xl">
+              Bhrigu Tayal (+91 79824 75557)
+            </h1>
           </div>
         </div>
       </div>
