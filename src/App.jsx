@@ -236,14 +236,18 @@ const Hero = () => {
           /> */}
           <div className="dates flex flex-col h-full justify-center sm:items-end items-start sm:pt-26 z-20">
             <div className="flex h-full sm:gap-6 gap-7 sm:pl-0 pl-1">
-            <img src={date} alt="" className="sm:h-[6rem] sm:w-[15rem] h-[40px]  w-[100px]"/>
-            <img
-              src={april}
-              alt=""
-              height=""
-              width=""
-              className="sm:h-[5.8rem] sm:w-[25rem] h-[38px]  w-[166px]"
-            />
+              <img
+                src={date}
+                alt=""
+                className="sm:h-[6rem] sm:w-[15rem] h-[40px]  w-[100px]"
+              />
+              <img
+                src={april}
+                alt=""
+                height=""
+                width=""
+                className="sm:h-[5.8rem] sm:w-[25rem] h-[38px]  w-[166px]"
+              />
             </div>
             <img
               src={year}
@@ -466,6 +470,16 @@ const TicketBuying = () => {
           <img src={Ticket3} alt="" className=" sm:h-[440px] w-full" />
           <img src={Ticket4} alt="" className=" sm:h-[440px] w-full" />
           <img src={Ticket5} alt="" className=" sm:h-[440px] w-full" />
+        </div>
+
+        <div className="flex flex-col h-full w-full gap-10 lg:pt-16 pt-20">
+          <div>
+            <h1 className="text-white text-2xl text-center">For any queries contact:</h1>
+          </div>
+          <div className="flex flex-col lg:flex-row gap-10 items-center justify-center">
+            <h1 className="text-white text-xl">Priyal Agarwal (+91 9136284851)</h1>
+            <h1 className="text-white text-xl">Bhrigu Tayal (+91 79824 75557)</h1>
+          </div>
         </div>
       </div>
     </>
