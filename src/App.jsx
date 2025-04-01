@@ -249,7 +249,7 @@ const Hero = () => {
             alt=""
             className="sm:invisible visible w-[300px] z-20"
           /> */}
-          <div className="dates flex flex-col h-full justify-center sm:items-end items-start sm:pt-26 z-20">
+          <div className="dates flex flex-col h-full justify-center sm:items-end items-start sm:pt-26 pt-10 z-20">
             <div className="flex h-full sm:gap-6 gap-7 sm:pl-0 pl-1">
               <img
                 src={date}
