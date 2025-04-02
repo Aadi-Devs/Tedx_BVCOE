@@ -1030,12 +1030,12 @@ const Footer = () => {
                 </h2>
                 <ul className="text-gray-500 dark:text-gray-400 font-medium">
                   <li className="mb-4">
-                    <a href="" className="hover:underline">
+                    <a href="https://drive.google.com/file/d/1sG8G_2TdXA6USHhFxA0zbNK6rTkoAjne/view?usp=drive_link" className="hover:underline">
                       Privacy Policy
                     </a>
                   </li>
                   <li>
-                    <a href="" className="hover:underline">
+                    <a href="https://drive.google.com/file/d/1sEDSFgmHAFKGZyUfDQaCa_skWHfo8ILG/view?usp=drive_link" className="hover:underline">
                       Terms & Conditions
                     </a>
                   </li>
