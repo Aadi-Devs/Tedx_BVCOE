@@ -211,7 +211,7 @@ const Navbar = () => {
               className="p-5 xl:p-8 text-white font-bold hover:text-underline"
               onClick={() => scrollToElement("hero", 1200)}
             >
-              TedxBVCOE25
+              TEDxBVCOE25
             </Link>
           </ul>
         </div>
