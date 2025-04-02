@@ -493,12 +493,23 @@ const TicketBuying = () => {
           </button>
         </Link> */}
         <h1 className="text-white text-4xl font-bold">AVAILABLE PASSES</h1>
+        <h1 className="text-white text-2xl">Click On The Tickets To Buy</h1>
         <div className="flex flex-col sm:gap-16 px-6 gap-16">
-          <img src={Ticket1} alt="" className=" sm:h-[440px] w-full" />
-          <img src={Ticket2} alt="" className=" sm:h-[440px] w-full" />
-          <img src={Ticket3} alt="" className=" sm:h-[440px] w-full" />
-          <img src={Ticket4} alt="" className=" sm:h-[440px] w-full" />
-          <img src={Ticket5} alt="" className=" sm:h-[440px] w-full" />
+          <a href="https://docs.google.com/forms/d/1uelLpfmfbci9HoVZST41mkswA31ITon-Z9gYPvrEFmU/edit">
+            <img src={Ticket1} alt="" className=" sm:h-[440px] w-full" />
+          </a>
+          <a href="https://docs.google.com/forms/d/1uelLpfmfbci9HoVZST41mkswA31ITon-Z9gYPvrEFmU/edit">
+            <img src={Ticket2} alt="" className=" sm:h-[440px] w-full" />
+          </a>
+          <a href="https://docs.google.com/forms/d/1uelLpfmfbci9HoVZST41mkswA31ITon-Z9gYPvrEFmU/edit">
+            <img src={Ticket3} alt="" className=" sm:h-[440px] w-full" />
+          </a>
+          <a href="https://docs.google.com/forms/d/1uelLpfmfbci9HoVZST41mkswA31ITon-Z9gYPvrEFmU/edit">
+            <img src={Ticket4} alt="" className=" sm:h-[440px] w-full" />
+          </a>
+          <a href="https://docs.google.com/forms/d/1uelLpfmfbci9HoVZST41mkswA31ITon-Z9gYPvrEFmU/edit">
+            <img src={Ticket5} alt="" className=" sm:h-[440px] w-full" />
+          </a>
         </div>
 
         <div className="flex flex-col h-full w-full gap-10 lg:pt-16 pt-20">
@@ -1030,12 +1041,18 @@ const Footer = () => {
                 </h2>
                 <ul className="text-gray-500 dark:text-gray-400 font-medium">
                   <li className="mb-4">
-                    <a href="https://drive.google.com/file/d/1sG8G_2TdXA6USHhFxA0zbNK6rTkoAjne/view?usp=drive_link" className="hover:underline">
+                    <a
+                      href="https://drive.google.com/file/d/1sG8G_2TdXA6USHhFxA0zbNK6rTkoAjne/view?usp=drive_link"
+                      className="hover:underline"
+                    >
                       Privacy Policy
                     </a>
                   </li>
                   <li>
-                    <a href="https://drive.google.com/file/d/1sEDSFgmHAFKGZyUfDQaCa_skWHfo8ILG/view?usp=drive_link" className="hover:underline">
+                    <a
+                      href="https://drive.google.com/file/d/1sEDSFgmHAFKGZyUfDQaCa_skWHfo8ILG/view?usp=drive_link"
+                      className="hover:underline"
+                    >
                       Terms & Conditions
                     </a>
                   </li>
