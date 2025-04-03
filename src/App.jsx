@@ -411,42 +411,42 @@ const Speakers = () => {
             <img
               src={Speaker1}
               alt=""
-              className=" sm:h-[440px] w-full rounded-3xl"
+              className=" sm:h-[440px] w-full lg:rounded-3xl rounded-xl"
             />
           </a>
           <a href="https://www.linkedin.com/in/saakshar-duggal-7881aa228?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
             <img
               src={Speaker2}
               alt=""
-              className=" sm:h-[440px] w-full rounded-3xl"
+              className=" sm:h-[440px] w-full lg:rounded-3xl rounded-xl"
             />
           </a>
           <a href="https://www.arborliving.in/">
             <img
               src={Speaker3}
               alt=""
-              className=" sm:h-[440px] w-full rounded-3xl"
+              className=" sm:h-[440px] w-full lg:rounded-3xl rounded-xl"
             />
           </a>
           <a href="https://www.linkedin.com/in/sougata-bhattacharjee/">
             <img
               src={Speaker4}
               alt=""
-              className=" sm:h-[440px] w-full rounded-3xl"
+              className=" sm:h-[440px] w-full lg:rounded-3xl rounded-xl"
             />
           </a>
           <a href="https://www.linkedin.com/in/lt-general-anil-kapoor/">
             <img
               src={Speaker5}
               alt=""
-              className=" sm:h-[440px] w-full rounded-3xl"
+              className=" sm:h-[440px] w-full lg:rounded-3xl rounded-xl"
             />
           </a>
           <a href="https://www.linkedin.com/in/dr-varda-sardana-120b8684">
             <img
               src={Speaker6}
               alt=""
-              className=" sm:h-[440px] w-full rounded-3xl"
+              className=" sm:h-[440px] w-full lg:rounded-3xl rounded-xl"
             />
           </a>
         </div>
