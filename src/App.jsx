@@ -493,7 +493,13 @@ const TicketBuying = () => {
           </button>
         </Link> */}
         <h1 className="text-white text-4xl font-bold">AVAILABLE PASSES</h1>
-        <h1 className="text-white text-2xl">Click On The Tickets To Buy</h1>
+        {/* <h1 className="text-white text-2xl">Click On The Tickets To Buy</h1> */}
+        <h1 className="hidden sm:block text-white text-2xl">
+          Click On The Tickets To Buy
+        </h1>
+        <h1 className="block sm:hidden text-white text-2xl">
+          Tap On The Tickets To Buy
+        </h1>
         <div className="flex flex-col sm:gap-16 px-6 gap-16">
           <a href="https://docs.google.com/forms/d/1uelLpfmfbci9HoVZST41mkswA31ITon-Z9gYPvrEFmU/edit">
             <img src={Ticket1} alt="" className=" sm:h-[440px] w-full" />
