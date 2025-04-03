@@ -1003,7 +1003,7 @@ const Footer = () => {
                 <ul className="text-gray-500 dark:text-gray-400 font-medium">
                   <li className="mb-4">
                     <a
-                      href="https://www.instagram.com/tedxbvcoe.2024/"
+                      href="https://www.instagram.com/tedxbvcoe.2025/"
                       className="hover:underline"
                     >
                       Instagram
@@ -1065,7 +1065,7 @@ const Footer = () => {
               </div>
             </span>
             <div className="flex mt-4 sm:justify-center gap-6 items-center sm:mt-0">
-              <a href="https://www.instagram.com/tedxbvcoe.2024/" className="">
+              <a href="https://www.instagram.com/tedxbvcoe.2025/" className="">
                 <img src={insta_logo} alt="" className="w-14" />
               </a>
               <a href="https://www.linkedin.com/company/tedx-bvcoe/posts/?feedView=all">
