@@ -2,10 +2,8 @@ import React, { useState } from "react";
 import "./index.css";
 import "./fonts.css";
 import navLogo from "./assets/navLogo.svg";
-// import homeLogo from "./assets/homeLogo.svg";
 import heroImg1 from "./assets/heroImg1.svg";
 import navMobileMenu from "./assets/navMobileMenu.svg";
-// import year from "./assets/2025.png";
 import Passes_btn_heart from "./assets/Passes_btn_heart.png";
 import Arrow from "./assets/Arrow.png";
 import insta_logo from "./assets/insta_logo.png";
@@ -13,6 +11,12 @@ import linkedIn_logo from "./assets/linkedIn_logo.png";
 import april from "./assets/april.png";
 import year from "./assets/2025.png";
 import date from "./assets/9th.png";
+import Speaker1 from "./assets/Speakers/Oluchi Ikechi 1 .jpg";
+import Speaker2 from "./assets/Speakers/saakshar duggal 2.jpg";
+import Speaker3 from "./assets/Speakers/ria mohta 3.jpg";
+import Speaker4 from "./assets/Speakers/sougatta bhata 4.jpg";
+import Speaker5 from "./assets/Speakers/anil kapoor 5.jpg";
+import Speaker6 from "./assets/Speakers/varda sardana 6.jpg";
 import Ticket1 from "./assets/Ticket_1.png";
 import Ticket2 from "./assets/Ticket_2.png";
 import Ticket3 from "./assets/Ticket_3.png";
@@ -40,6 +44,8 @@ import "aos/dist/aos.css";
 import pcImage from "./assets/pcImage.jpeg";
 import mobileImage from "./assets/mobileImage.jpeg";
 
+// import year from "./assets/2025.png";
+// import homeLogo from "./assets/homeLogo.svg";
 // import heroImgMobile from "./assets/heroImgMobile.svg";
 // import heroImg2 from "./assets/heroImg2.svg";
 // import infoButtonImgLeft from "./assets/infoButtonImgLeft.svg";
@@ -383,10 +389,10 @@ const Speakers = () => {
       {/* min-h-[700px] */}
       <div
         id="speakers"
-        className="min-h-[300px] bg-black flex flex-col w-full px-10 sm:pt-8 items-center gap-6 lg:mt-[6rem] sm:mt-[4rem]"
+        className="min-h-full bg-black flex flex-col w-full sm:px-10 sm:pt-8 items-center gap-6 lg:mt-[6rem] sm:mt-[4rem]"
       >
         <h1 className="text-white text-3xl font-bold">SPEAKERS</h1>
-        <Link to="/continue">
+        {/* <Link to="/continue">
           <button className="bg-[#FFF0D2] flex flex-row items-center justify-center gap-3 transition-all text-center text-xl text-black font-bold py-2 px-4 rounded-xl h-16 cursor-pointer">
             OUR SPEAKERS
             <img
@@ -398,80 +404,52 @@ const Speakers = () => {
               route="/continue"
             />
           </button>
-        </Link>
-        {/* <div className="grid sm:grid-cols-3 grid-cols-1 gap-12 items-center justify-center">
-          <div className=" sm:h-[400px] h-[360px] w-80 flex flex-col items-center justify-center gap-4 border border-white rounded-2xl px-4 bg-[#000E24]">
+        </Link> */}
+
+        <div className="flex flex-col w-full sm:gap-16 px-6 gap-16 mt-10">
+          <a href="https://www.linkedin.com/in/oli-ikechi/">
             <img
-              src={card1Img}
+              src={Speaker1}
               alt=""
-              width="100"
-              height="100"
-              className="rounded-full h-40 w-40 object-cover"
+              className=" sm:h-[440px] w-full rounded-3xl"
             />
-            <div className="text-3xl font-bold text-[#D74D26]">
-              Vivek Rathod
-            </div>
-            <div className="text-2xl text-[#FFF0D2] text-center">
-              CEO- Excitel, Entrepreneur
-            </div>
-          </div>
-          <div className=" sm:h-[400px] h-[360px] w-80 flex flex-col items-center justify-center gap-4 border border-white rounded-2xl px-4 bg-[#000E24]">
+          </a>
+          <a href="https://www.linkedin.com/in/saakshar-duggal-7881aa228?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
             <img
-              src={card2Img}
+              src={Speaker2}
               alt=""
-              width="100"
-              height="100"
-              className="rounded-full h-40 w-40 object-cover"
+              className=" sm:h-[440px] w-full rounded-3xl"
             />
-            <div className="text-3xl font-bold text-[#D74D26]">
-              Sonendra Verma
-            </div>
-            <div className="text-2xl text-[#FFF0D2] text-center">
-              CEO, Aegis Covenant
-            </div>
-          </div>
-          <div className=" sm:h-[400px] h-[360px] w-80 flex flex-col items-center justify-center gap-4 border border-white rounded-2xl px-4 bg-[#000E24]">
+          </a>
+          <a href="https://www.arborliving.in/">
             <img
-              src={card3Img}
+              src={Speaker3}
               alt=""
-              width="100"
-              height="100"
-              className="rounded-full h-40 w-40 object-cover"
+              className=" sm:h-[440px] w-full rounded-3xl"
             />
-            <div className="text-3xl font-bold text-[#D74D26]">
-              Dr. Akriti Khatri
-            </div>
-            <div className="text-2xl text-[#FFF0D2] text-center">Detective</div>
-          </div>
-          <div className=" sm:h-[400px] h-[360px] w-80 flex flex-col items-center justify-center gap-4 border border-white rounded-2xl px-4 bg-[#000E24]">
+          </a>
+          <a href="https://www.linkedin.com/in/sougata-bhattacharjee/">
             <img
-              src={card4Img}
+              src={Speaker4}
               alt=""
-              width="100"
-              height="100"
-              className="rounded-full h-40 w-40 object-cover"
+              className=" sm:h-[440px] w-full rounded-3xl"
             />
-            <div className="text-3xl font-bold text-[#D74D26]">Khalid Wani</div>
-            <div className="text-2xl text-[#FFF0D2] text-center">
-              Marketing Guru
-            </div>
-          </div>
-          <div className=" sm:h-[400px] h-[360px] w-80 flex flex-col items-center justify-center gap-4 border border-white rounded-2xl px-4 bg-[#000E24]">
+          </a>
+          <a href="https://www.linkedin.com/in/lt-general-anil-kapoor/">
             <img
-              src={card5Img}
+              src={Speaker5}
               alt=""
-              width="100"
-              height="100"
-              className="rounded-full h-40 w-40 object-cover"
+              className=" sm:h-[440px] w-full rounded-3xl"
             />
-            <div className="text-3xl font-bold text-[#D74D26]">
-              Umesh Rathod
-            </div>
-            <div className="text-2xl text-[#FFF0D2] text-center">
-              Startup Mentor
-            </div>
-          </div>
-        </div> */}
+          </a>
+          <a href="https://www.linkedin.com/in/dr-varda-sardana-120b8684">
+            <img
+              src={Speaker6}
+              alt=""
+              className=" sm:h-[440px] w-full rounded-3xl"
+            />
+          </a>
+        </div>
       </div>
     </>
   );
@@ -483,7 +461,7 @@ const TicketBuying = () => {
       {/* min-h-screen */}
       <div
         id="tickets"
-        className="bg-black min-h-screen flex flex-col w-full gap-8 items-center"
+        className="bg-black min-h-screen flex flex-col w-full gap-8 items-center mt-25"
       >
         {/* <h1 className="text-white text-3xl font-bold">PASSES</h1> */}
         {/* <Link to="/continue">
