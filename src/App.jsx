@@ -421,7 +421,7 @@ const Speakers = () => {
               className=" sm:h-[440px] w-full lg:rounded-3xl rounded-xl"
             />
           </a>
-          <a href="https://www.arborliving.in/">
+          <a href="https://www.instagram.com/ria.gandhe/">
             <img
               src={Speaker3}
               alt=""
