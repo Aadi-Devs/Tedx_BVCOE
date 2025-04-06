@@ -97,6 +97,27 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
 
+  const [selectedEvent, setSelectedEvent] = useState("TEDxBVCOE25");
+
+  const handleChange = (e) => {
+    const value = e.target.value;
+    setSelectedEvent(value);
+
+    // Map values to URLs
+    const urls = {
+      TEDxBVCOE25: "https://www.tedxbvcoe.in/",
+      TEDxBVCOE23: "https://te-dx-bvcoe-2023.vercel.app/",
+      TEDxBVCOE22: "https://tedxbvcoe-website-66747n5xw-bvcoetedx.vercel.app/",
+      TEDxBVCOE21: "https://tedxbvcoe-website-66747n5xw-bvcoetedx.vercel.app/2021",
+    };
+
+    // Redirect if a URL exists
+    if (urls[value]) {
+      window.open(urls[value], "_blank"); // open in new tab
+      // or use window.location.href = urls[value]; for same tab
+    }
+  };
+
   return (
     <>
       <nav
@@ -151,7 +172,20 @@ const Navbar = () => {
           >
             CONTACT
           </Link>
-          <span className="">TEDxBVCOE25</span>
+          {/* <span className="">TEDxBVCOE25</span> */}
+
+          <div className="relative inline-block bg-transparent text-white">
+            <select
+              value={selectedEvent}
+              onChange={handleChange}
+              className="bg-transparent text-white appearance-none outline-none cursor-pointer"
+            >
+              <option value="TEDxBVCOE25" className="text-black">TEDxBVCOE25</option>
+              <option value="TEDxBVCOE23" className="text-black">TEDxBVCOE23</option>
+              <option value="TEDxBVCOE22" className="text-black">TEDxBVCOE22</option>
+              <option value="TEDxBVCOE21" className="text-black">TEDxBVCOE21</option>
+            </select>
+          </div>
         </div>
       </nav>
 
@@ -213,12 +247,18 @@ const Navbar = () => {
             >
               CONTACT
             </Link>
-            <Link
-              className="p-5 xl:p-8 text-white font-bold hover:text-underline"
-              onClick={() => scrollToElement("hero", 1200)}
+            <div className="relative inline-block bg-transparent text-white">
+            <select
+              value={selectedEvent}
+              onChange={handleChange}
+              className="bg-transparent mt-5 xl:p-8 text-white font-bold appearance-none outline-none cursor-pointer"
             >
-              TEDxBVCOE25
-            </Link>
+              <option value="TEDxBVCOE25" className="text-black">TEDxBVCOE25</option>
+              <option value="TEDxBVCOE23" className="text-black">TEDxBVCOE23</option>
+              <option value="TEDxBVCOE22" className="text-black">TEDxBVCOE22</option>
+              <option value="TEDxBVCOE21" className="text-black">TEDxBVCOE21</option>
+            </select>
+          </div>
           </ul>
         </div>
       </nav>
