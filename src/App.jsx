@@ -22,6 +22,9 @@ import Ticket2 from "./assets/Ticket_2.png";
 import Ticket3 from "./assets/Ticket_3.png";
 import Ticket4 from "./assets/Ticket_4.png";
 import Ticket5 from "./assets/Ticket_5.png";
+import farmley from "./assets/Sponsors/farmley.png";
+import UniStyl from "./assets/Sponsors/UniStyl.png";
+import XTCY from "./assets/Sponsors/XTCY.png";
 import Paridhi from "./assets/Team/paridhi_harit.jpg";
 import Ridhi from "./assets/Team/Ridhi_Gupta.jpeg";
 import Aashima from "./assets/Team/Aashima_Bathla.jpeg";
@@ -562,15 +565,23 @@ const Partners = () => {
       {/* h-fit */}
       <div
         id="partners"
-        className="flex flex-col min-h-[300px] items-center justify-center sm:pb-0 pb-12 gap-10 bg-black "
+        className="flex flex-col min-h-[300px] items-center justify-center sm:pb-0 pb-12 gap-10 bg-black mt-20"
       >
         <h1 className="text-white font-bold text-3xl">OUR PARTNERS</h1>
-        <Link to="/continue">
+        {/* <Link to="/continue">
           <button className="bg-gray-400 flex flex-row items-center justify-center gap-3 transition-all text-center text-xl text-black font-bold py-2 px-4 rounded-xl h-16 cursor-pointer">
             PARTNERS REVEALING SOON
             <img src={Passes_btn_heart} alt="" className="w-4" />
           </button>
-        </Link>
+        </Link> */}
+
+        <div className="flex lg:flex-row flex-col gap-40 items-center mt-20">
+          <div className=""><img src={XTCY} className="lg:h-30 lg:w-60 h-25 w-50" alt="" /></div>
+          <div className=""><img src={UniStyl} className="lg:h-30 lg:w-90 h-25 w-75" alt="" /></div>
+          <div className=""><img src={farmley} className="lg:h-50 lg:w-60 h-45 w-55" alt="" /></div>
+        </div>
+
+
       </div>
     </>
   );
@@ -581,7 +592,7 @@ const Team = () => {
     <>
       <div
         id="team"
-        className="flex flex-col gap-20 h-full w-full bg-black p-10 "
+        className="flex flex-col gap-20 h-full w-full bg-black p-10 mt-10"
       >
         <div className="w-full">
           <h1 className="text-3xl font-bold text-white text-center">
@@ -759,7 +770,7 @@ const Team = () => {
                     Priyal Agarwal
                   </h4>
                   <span class="text-white text-center block transition-all duration-500 ">
-                    Head of Productions
+                    Head of Operations
                   </span>
                 </div>
                 <div class="group block text-center lg:w-1/5 sm:w-1/3 min-[450px]:w-1/2 w-full">
