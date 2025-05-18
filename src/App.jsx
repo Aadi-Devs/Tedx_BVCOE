@@ -111,7 +111,8 @@ const Navbar = () => {
       TEDxBVCOE25: "https://www.tedxbvcoe.in/",
       TEDxBVCOE23: "https://te-dx-bvcoe-2023.vercel.app/",
       TEDxBVCOE22: "https://tedxbvcoe-website-66747n5xw-bvcoetedx.vercel.app/",
-      TEDxBVCOE21: "https://tedxbvcoe-website-66747n5xw-bvcoetedx.vercel.app/2021",
+      TEDxBVCOE21:
+        "https://tedxbvcoe-website-66747n5xw-bvcoetedx.vercel.app/2021",
     };
 
     // Redirect if a URL exists
@@ -183,10 +184,18 @@ const Navbar = () => {
               onChange={handleChange}
               className="bg-transparent text-white appearance-none outline-none cursor-pointer"
             >
-              <option value="TEDxBVCOE25" className="text-black">TEDxBVCOE25</option>
-              <option value="TEDxBVCOE23" className="text-black">TEDxBVCOE23</option>
-              <option value="TEDxBVCOE22" className="text-black">TEDxBVCOE22</option>
-              <option value="TEDxBVCOE21" className="text-black">TEDxBVCOE21</option>
+              <option value="TEDxBVCOE25" className="text-black">
+                TEDxBVCOE25
+              </option>
+              <option value="TEDxBVCOE23" className="text-black">
+                TEDxBVCOE23
+              </option>
+              <option value="TEDxBVCOE22" className="text-black">
+                TEDxBVCOE22
+              </option>
+              <option value="TEDxBVCOE21" className="text-black">
+                TEDxBVCOE21
+              </option>
             </select>
           </div>
         </div>
@@ -251,17 +260,25 @@ const Navbar = () => {
               CONTACT
             </Link>
             <div className="relative inline-block bg-transparent text-white">
-            <select
-              value={selectedEvent}
-              onChange={handleChange}
-              className="bg-transparent mt-5 xl:p-8 text-white font-bold appearance-none outline-none cursor-pointer"
-            >
-              <option value="TEDxBVCOE25" className="text-black">TEDxBVCOE25</option>
-              <option value="TEDxBVCOE23" className="text-black">TEDxBVCOE23</option>
-              <option value="TEDxBVCOE22" className="text-black">TEDxBVCOE22</option>
-              <option value="TEDxBVCOE21" className="text-black">TEDxBVCOE21</option>
-            </select>
-          </div>
+              <select
+                value={selectedEvent}
+                onChange={handleChange}
+                className="bg-transparent mt-5 xl:p-8 text-white font-bold appearance-none outline-none cursor-pointer"
+              >
+                <option value="TEDxBVCOE25" className="text-black">
+                  TEDxBVCOE25
+                </option>
+                <option value="TEDxBVCOE23" className="text-black">
+                  TEDxBVCOE23
+                </option>
+                <option value="TEDxBVCOE22" className="text-black">
+                  TEDxBVCOE22
+                </option>
+                <option value="TEDxBVCOE21" className="text-black">
+                  TEDxBVCOE21
+                </option>
+              </select>
+            </div>
           </ul>
         </div>
       </nav>
@@ -372,7 +389,7 @@ const InfoButtons = () => {
 
   return (
     // sm:h-[600px]
-    <div className="flex relative w-full flex-col items-center justify-center lg:h-[1350px] sm:h-[1000px] bg-black gap-0 lg:mt-[0rem] mt-[10rem]">
+    <div className="flex relative w-full flex-col items-center justify-center lg:h-[800px] sm:h-[1000px] bg-black gap-0 lg:mt-[0rem] mt-[10rem]">
       <h1 className="info-heading text-white text-[40pt] font-bold top-0 uppercase">
         WHAT IS?
       </h1>
@@ -413,7 +430,7 @@ const InfoButtons = () => {
       {/* yt Video */}
 
       {/* width="560" height="315" */}
-      <iframe
+      {/* <iframe
         src="https://www.youtube.com/embed/uNq8OJm8sA8?si=k_ujkofvwRfPYm41"
         title="YouTube video player"
         frameborder="0"
@@ -421,7 +438,7 @@ const InfoButtons = () => {
         referrerpolicy="strict-origin-when-cross-origin"
         allowfullscreen
         className="lg:w-[68rem] lg:h-[40rem] h-[15rem] w-[22rem] lg:mt-[14rem] mt-[22rem] rounded-3xl"
-      ></iframe>
+      ></iframe> */}
     </div>
   );
 };
@@ -432,7 +449,7 @@ const Speakers = () => {
       {/* min-h-[700px] */}
       <div
         id="speakers"
-        className="min-h-full bg-black flex flex-col w-full sm:px-10 sm:pt-8 items-center gap-6 lg:mt-[6rem] sm:mt-[4rem]"
+        className="min-h-full bg-black flex flex-col w-full sm:px-10  items-center gap-6 mt-[7rem]"
       >
         <h1 className="text-white text-3xl font-bold">SPEAKERS</h1>
         {/* <Link to="/continue">
@@ -576,12 +593,16 @@ const Partners = () => {
         </Link> */}
 
         <div className="flex lg:flex-row flex-col gap-40 items-center mt-20">
-          <div className=""><img src={XTCY} className="lg:h-30 lg:w-60 h-25 w-50" alt="" /></div>
-          <div className=""><img src={UniStyl} className="lg:h-30 lg:w-90 h-25 w-75" alt="" /></div>
-          <div className=""><img src={farmley} className="lg:h-50 lg:w-60 h-45 w-55" alt="" /></div>
+          <div className="">
+            <img src={XTCY} className="lg:h-30 lg:w-60 h-25 w-50" alt="" />
+          </div>
+          <div className="">
+            <img src={UniStyl} className="lg:h-30 lg:w-90 h-25 w-75" alt="" />
+          </div>
+          <div className="">
+            <img src={farmley} className="lg:h-50 lg:w-60 h-45 w-55" alt="" />
+          </div>
         </div>
-
-
       </div>
     </>
   );
@@ -724,13 +745,14 @@ const Team = () => {
                 </div>
                 <div class="group block text-center lg:w-1/5 sm:w-1/3 min-[450px]:w-1/2 w-full">
                   <div class="relative mb-5">
-                    <a href="https://www.linkedin.com/in/abhinavkumarsingh1405">
-                      <img
-                        src={Abhinav}
-                        alt="Kathryn image"
-                        class="w-56 h-56 rounded-2xl object-cover mx-auto ransition-all duration-500 border-2 border-solid border-transparent group-hover:border-red-600"
-                      />
-                    </a>
+                    {/* https://www.linkedin.com/in/abhinavkumarsingh1405 */}
+                    <img
+                      src={Abhinav}
+                      alt="Kathryn image"
+                      class="w-56 h-56 rounded-2xl object-cover mx-auto ransition-all duration-500 border-2 border-solid border-transparent group-hover:border-red-600"
+                    />
+                    {/* <a href="">
+                    </a> */}
                   </div>
                   <h4 class="text-xl text-white font-semibold text-center mb-2 transition-all duration-500 ">
                     Abhinav Singh
@@ -775,13 +797,14 @@ const Team = () => {
                 </div>
                 <div class="group block text-center lg:w-1/5 sm:w-1/3 min-[450px]:w-1/2 w-full">
                   <div class="relative mb-5">
-                    <a href="http://www.linkedin.com/in/harshvardhan-rajput-504b941b5">
+                    {/* http://www.linkedin.com/in/harshvardhan-rajput-504b941b5 */}
                       <img
                         src={Harshvardhan}
                         alt="Leslie image"
                         class="w-56 h-56 rounded-2xl object-cover mx-auto ransition-all duration-500 border-2 border-solid border-transparent group-hover:border-red-600"
                       />
-                    </a>
+                    {/* <a href="">
+                    </a> */}
                   </div>
                   <h4 class="text-xl text-white font-semibold text-center mb-2 transition-all duration-500 ">
                     Harshvardhan Singh Rajput
